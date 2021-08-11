@@ -14,8 +14,9 @@
   - [Links](#links)
   ## Description
   Are you bored? Don't have plans tonight? We have the perfect app for you. This app will help you find a close-knit group of people that you can vent to about your problems or share your excitement about your team winning the championship. If you're new to town or just want to connect with new people join High 5!  High 5! allows you to create blogs, interact with blogs, and follow current members that have similar interests as you. Sign up today!
+  
   ## Installation
-   Developers looking to practice with this app you must install [Node.js](https://nodejs.org/en/).  Once you have Node.js installed, then install Node Package Manager(npm) and a few dependencies such as Express, Handlebars and Sequelize
+   Developers looking to practice with this app you must install [Node.js](https://nodejs.org/en/).  Once installed, then install Node Package Manager(npm) and a few dependencies such as Express, Handlebars and Sequelize
 
 ## Purpose
 
