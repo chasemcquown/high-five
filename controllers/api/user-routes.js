@@ -10,9 +10,9 @@ router.get('/', (req, res) => {
         attributes: { exclude: ['password'] }
     })
     .then(userInfo => res.json(userInfo))
-    .catch( err => {
-      console.log(err);
-      res.status(500).json(err);
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
     })
 });
 
@@ -23,23 +23,23 @@ router.get('/:id', (req,res) => {
         where: {
             id: req.params.id
         }
-        // include the other necessary models below that will provide additional user info
     })
     .then(userInfo => {
         if (!userInfo) {
-          res.status(404).json({ message: 'No user found with this id' });
-          return;
+            res.status(404).json({ message: 'No user found with this id' })
         }
-        res.json(userInfo)
+        res.json(userInfo);;
     })
     .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
+        console.log(err);
+        res.status(500).json(err);
+    })
 });
 
 // add the ability to create a user
 router.post('/', (req, res) => {
+    User.create({})
+    .then(userInfo => )
 
 });
 
@@ -55,7 +55,21 @@ router.post('/logout', (req, res) => {
 
 // add the ability to delte a user
 router.delete('/:id', (req, res) => {
-
+    User.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(userInfo => {
+        if (!userInfo) {
+            res.status(404).json({ message: 'No user found with this id' });
+        }
+        res.json(userInfo);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    })
 }); 
 
 module.exports = router;
