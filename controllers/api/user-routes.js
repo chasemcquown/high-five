@@ -1,4 +1,4 @@
-// import dependecie(s)
+// import dependecies
 const router = require('express').Router();
 
 // import the necessary models
@@ -38,8 +38,18 @@ router.get('/:id', (req,res) => {
 
 // add the ability to create a user
 router.post('/', (req, res) => {
-    User.create({})
-    .then(userInfo => )
+    User.create({
+        username: req.body.username,
+        password: req.body.password,
+        favoriteSong: req.body.favoriteSong,
+        favoriteTeam: req.body.favoriteTeam,
+        favoriteFood: req.body.favoriteFood,
+        favoritePlace: req.body.favoritePlace,
+        favoriteMovie: req.body.favoriteMovie
+    })
+    .then(userInfo => {
+
+    })
 
 });
 
