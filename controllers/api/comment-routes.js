@@ -27,6 +27,28 @@ router.post("/", withAuth, (req, res) => {
     });
 });
 
+//update a comment
+router.put("/:id", (req, res) => {
+  // update a category by its `id` value
+  Category.update(req.body, {
+    category_name: true,
+    where: {
+      id: req.params.id,
+    },
+  })
+    .then((dbCategoryData) => {
+      if (!dbCategoryData[0]) {
+        res.status(404).json({ message: "No comment found" });
+        return;
+      }
+      res.json(dbCategoryData);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
 router.delete("/:id", withAuth, (req, res) => {
   Comment.destroy({
     where: {
