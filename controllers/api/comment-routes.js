@@ -1,19 +1,19 @@
 const router = require("express").Router();
 //import necessary models
 const { Comment } = require("../../models");
-const withAuth = require("../../utils/auth");
+//const withAuth = require("../../utils/auth");
 
 //get all comments
 router.get("/", (req, res) => {
   Comment.findAll()
-    .then((dbCommentData) => res.json(dbCommentData))
+    .then((dbCommentData) => res.json("dbCommentData"))
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);
     });
 });
 
-router.post("/", withAuth, (req, res) => {
+router.post("/", (req, res) => {
   // expects => {comment_text: "This is the comment", user_id: 1, post_id: 2}
   Comment.create({
     comment_text: req.body.comment_text,
