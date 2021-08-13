@@ -6,9 +6,14 @@ async function signupHandler(event) {
     event.preventDefault();
 
     // retrieve username value
-    const username = document.querySelector('').value.trim();
+    const username = document.querySelector('#username').value.trim();
     // retrieve password value
-    const password = document.querySelector('').value.trim();
+    const password = document.querySelector('#password').value.trim();
+
+    // retreive user's first name
+    const firstName = document.querySelector('#firstName').value.trim();
+    // retrieve user's last name
+    const lastName = document.querySelector('#lastName').value.trim();
 
     // retrieve 5 favorite things
     const favoriteSong = document.querySelector('').value.trim();
@@ -17,7 +22,7 @@ async function signupHandler(event) {
     const favoritePlace = document.querySelector('').value.trim();
     const favoriteMovie = document.querySelector('').value.trim();
 
-    // check that username and password values exist... if they do, send their info to database
+    // check that username and password values exist... if they do, send their info to the database
     if (username && password) {
         const response = await fetch('/api/users', {
             method: 'Post',
