@@ -34,9 +34,38 @@ Comment.belongsTo(User, {
     foreignKey: 'user_id',
     onDelete: "cascade"
 });
+
+/*User can like many posts (one to many )*/
+User.hasMany(Likes, {
+    foreignKey: 'user_id',
+    onDelete: "cascade"
+});
+
+/*creates an association between the likes and the user. 
+The foreign key is added on the likes.*/
+Likes.belongsTo(User, {
+    foreignKey: 'user_id',
+    onDelete: "cascade"
+});
+
+
+/*User can like many posts (one to many )*/
+User.hasMany(Follower, {
+    foreignKey: 'user_id',
+    onDelete: "cascade"
+});
+
+/*creates an association between the follower and the user. 
+The foreign key is added on the follower.*/
+Follower.belongsTo(User, {
+    foreignKey: 'user_id',
+    onDelete: "cascade"
+});
+
 /*==============================================*/
 /*================Post Relations================*/
 /*==============================================*/
+
 
 
 /*==============================================*/
