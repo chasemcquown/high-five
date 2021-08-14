@@ -1,0 +1,11 @@
+<div id="contentDiv"></div>
+
+<!-- Compile with handlebars groceries.handlebars -f groceries.js -->
+
+<script id="interest-template" type="text/x-handlebars-template">
+	{{#each interests}}
+		<div class='interest-item'>
+			<button>Item: {{this.item}} </button>
+		</div>
+	{{/each}}
+</script>
