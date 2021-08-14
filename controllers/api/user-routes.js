@@ -1,8 +1,7 @@
 // import dependecies
 const router = require('express').Router();
 
-// import the necessary models
-const { User } = require('../../models');
+const { User, Post, Comment, Interest } = require('../../models');
 
 // get all users for main page cards
 router.get('/', (req, res) => {
@@ -22,7 +21,28 @@ router.get('/:id', (req,res) => {
         attributes: { exclude: ['password'] },
         where: {
             id: req.params.id
-        }
+        },
+        include: [
+            {
+                model: Post,
+                attributes: ['id', 'title', 'post_url', 'created_at']
+            },
+            {
+                model: Like,
+                attributes: ['']
+            },
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'created_at']
+            },
+            {
+                model: UserInterest,
+                attributes: ['interest'],
+                through: Interst,
+                as: 'usersInterests'
+            }
+        ]
+
     })
     .then(userInfo => {
         if (!userInfo) {
@@ -38,29 +58,68 @@ router.get('/:id', (req,res) => {
 
 // add the ability to create a user
 router.post('/', (req, res) => {
+    // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
     User.create({
-        username: req.body.username,
-        password: req.body.password,
-        favoriteSong: req.body.favoriteSong,
-        favoriteTeam: req.body.favoriteTeam,
-        favoriteFood: req.body.favoriteFood,
-        favoritePlace: req.body.favoritePlace,
-        favoriteMovie: req.body.favoriteMovie
+      username: req.body.username,
+      email: req.body.email,
+      password: req.body.password
     })
-    .then(userInfo => {
-
-    })
-
+      .then(dbUserData => {
+        req.session.save(() => {
+          req.session.user_id = dbUserData.id;
+          req.session.username = dbUserData.username;
+          req.session.loggedIn = true;
+    
+          res.json(dbUserData);
+        });
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
 });
 
 // add ability for user to login 
-router.post('/login', (req, res) => {
 
+router.post('/login', (req, res) => {
+    // expects {email: 'lernantino@gmail.com', password: 'password1234'}
+    User.findOne({
+      where: {
+        email: req.body.email
+      }
+    }).then(dbUserData => {
+      if (!dbUserData) {
+        res.status(400).json({ message: 'No user with that email address!' });
+        return;
+      }
+  
+      const validPassword = dbUserData.checkPassword(req.body.password);
+  
+      if (!validPassword) {
+        res.status(400).json({ message: 'Incorrect password!' });
+        return;
+      }
+  
+      req.session.save(() => {
+        req.session.user_id = dbUserData.id;
+        req.session.username = dbUserData.username;
+        req.session.loggedIn = true;
+    
+        res.json({ user: dbUserData, message: 'You are now logged in!' });
+      });
+    });
 });
 
 // add the ability for user to logout
 router.post('/logout', (req, res) => {
-
+    if (req.session.loggedIn) {
+      req.session.destroy(() => {
+        res.status(204).end();
+      });
+    }
+    else {
+      res.status(404).end();
+    }
 });
 
 // add the ability to delte a user
