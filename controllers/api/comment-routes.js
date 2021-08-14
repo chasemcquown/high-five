@@ -1,12 +1,12 @@
 const router = require("express").Router();
 //import necessary models
-const { Comment } = require("../../models");
+//const { Comment } = require("../../models");
 //const withAuth = require("../../utils/auth");
 
 //get all comments
 router.get("/", (req, res) => {
   Comment.findAll()
-    .then((dbCommentData) => res.json("dbCommentData"))
+    .then((dbCommentData) => res.json(dbCommentData))
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);
@@ -49,7 +49,7 @@ router.put("/:id", (req, res) => {
     });
 });
 
-router.delete("/:id", withAuth, (req, res) => {
+router.delete("/:id", (req, res) => {
   Comment.destroy({
     where: {
       id: req.params.id,

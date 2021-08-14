@@ -1,56 +1,38 @@
-// path module
-const path = require("path");
-// dotenv file for sensitive configuration information
-require("dotenv").config();
-// Express.js server
 const express = require("express");
-// All routes as defined in the controllers folder
-const routes = require("./controllers/");
-// Sequelize connection to the database
-const sequelize = require("./config/connection");
-// Handlebars template engine for front-end
-const exphbs = require("express-handlebars");
-
-// Initialize handlebars for the html templates
-const hbs = exphbs.create({});
-
-// Initialize the server
 const app = express();
-// Define the port for the server
-const PORT = process.env.PORT || 3001;
-//to use express-session and sequelize store
 const session = require("express-session");
-const SequelizeStore = require("connect-session-sequelize")(session.Store);
-
-//create session object
+const exphbs = require("express-handlebars");
+const helpers = require("./utils/helpers");
+app.use(require("./controllers/"));
+const PORT = process.env.PORT || 3001;
+const sequelize = require("./config/connection");
+//const SequelizeStore = require("connect-session-sequelize")(session.Store);
+const path = require("path");
+/*
 const sess = {
-  secret: "canyouguessmysecret",
-  //cookie to start empty
+  secret: "Super secret secret",
   cookie: {},
   resave: false,
-  saveUninitialize: true,
+  saveUninitialized: true,
   store: new SequelizeStore({
     db: sequelize,
   }),
 };
 app.use(session(sess));
-// Give the server a path to the public directory for static files
-app.use(express.static(path.join(__dirname, "public")));
-
-// Set handlebars as the template engine for the server
+*/
+// we pass this file to hbs in order to use the functionality within the helpers.js file
+const hbs = exphbs.create({ helpers });
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
-
-// Have Express parse JSON and string data
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, "public")));
 
-// Give the server the path to the routes
-app.use(routes);
+//sequelize.sync({ force: false }).then(() => {
+// app.listen(PORT, () => console.log("Now listening"));
+//});
+app.listen(PORT, () => console.log("Now listening"));
 
-// Turn on connection to db and then to the server
-// force: true to reset the database and clear all values, updating any new relationships
-// force: false to maintain data - aka normal operation
-sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log("Now listening"));
+app.get("/", (req, res) => {
+  res.send("hello");
 });
