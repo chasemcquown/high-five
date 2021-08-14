@@ -50,13 +50,13 @@ async function handleInterests (event) {
     const interest5 = usersInterestsArray[4];
     
     if (usersInterestsArray[0] && usersInterestsArray[1] && usersInterestsArray[2] && usersInterestsArray[3] && usersInterestsArray[4]) {
-        const response = await fetch('/api/users/interests', {
+        const response = await fetch('/api/interests', {
             method: 'Post',
             body: JSON.stringify({ interest1, interest2, interest3, interest4, interest5 }),
             headers: { 'Content-Type' : 'application/json' }
         })
         if (response.ok) {
-            document.location.replace('/home');
+            document.location.replace('/user-feed');
         } else {
             alert(response.statusText);
         }
