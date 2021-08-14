@@ -3,6 +3,7 @@ const app = express();
 const exphbs = require('express-handlebars');
 // const bodyParser = require('body-parser');
 const path = require('path');
+const faker = require('faker');
 
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname + 'views')));
@@ -18,5 +19,5 @@ console.log(`Listening to server: http://localhost:${port}`);
 
 // Landing page
 app.get('/', (req, res) => {
-	res.render('main');
+	res.send('main');
 });
