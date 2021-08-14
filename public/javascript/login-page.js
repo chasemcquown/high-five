@@ -8,9 +8,11 @@ async function handleLogin(event) {
     event.preventDefault();
 
     // retreive username
-    const username = document.querySelector('#username-login').value.trim();
+    const username = document.querySelector('#username').value.trim();
     // retrieve password
-    const password = document.querySelector('#password-login').value.trim();
+    const password = document.querySelector('#password').value.trim();
+
+    console.log(username, password)
 
     if (username && password) {
         const response = await fetch('', {
@@ -30,7 +32,7 @@ async function handleLogin(event) {
 function handleSignup() {
     
     // if the sign up button is selected, then route user to the sign up page 
-    document.location.replace('/signup');
+    document.location.replace('/sign-up');
 
 };
 
