@@ -1,0 +1,100 @@
+<link
+	href='/public/stylesheets/profile.css'
+	rel='stylesheet'
+/>
+<section id='content' class='container'>
+	<!-- Begin .page-heading -->
+	<div class='page-heading'>
+		<div class='media clearfix'>
+			<div class='media-left pr30'>
+				{{!-- <a href='#'>
+					<img
+						class='media-object mw150'
+						src='https://bootdey.com/img/Content/avatar/avatar7.png'
+						alt='...'
+					/>
+				</a> --}}
+				{{faker "image.avatar"}}
+			</div>
+			<div class='media-body va-m'>
+				<h2 class='media-heading'>{{faker "name.findName"}}
+					<small> - Profile</small>
+				</h2>
+				
+				
+			</div>
+		</div>
+	</div>
+
+	<div class='row'>
+		<div class='col-md-4'>
+
+			<div class='panel'>
+				<div class='panel-heading'>
+					<span class='panel-icon'>
+						<i class='fa fa-trophy'></i>
+					</span>
+					<span class='panel-title'> My Interests</span>
+				</div>
+				<div class='panel-body pb5'>
+					<span class='label label-warning mr5 mb10 ib lh15'>{{faker "company.bsBuzz"}}</span>
+					<span class='label label-primary mr5 mb10 ib lh15'>{{faker "hacker.noun"}}</span>
+					<span class='label label-info mr5 mb10 ib lh15'>{{faker "address.city"}}</span>
+					<span class='label label-success mr5 mb10 ib lh15'>{{faker "company.catchPhraseNoun"}}</span>
+					<span class='label label-alert mr5 mb10 ib lh15'>{{faker "random.word"}}</span>
+
+				</div>
+			</div>
+			<div class='panel'>
+				<div class='panel-heading'>
+					<span class='panel-icon'>
+						<i class='fa fa-pencil'></i>
+					</span>
+					<span class='panel-title'>About Me</span>
+				</div>
+				<div class='panel-body pb5'>
+
+					<h6>What I do</h6>
+
+					<h4>{{faker "company.name"}}</h4>
+					<p class='text-muted'>
+						{{faker "catchPhrase"}}
+						{{faker "catchPhraseDescriptor"}}
+					</p>
+
+					<hr class='short br-lighter' />
+
+					<h6>Who I am</h6>
+
+					<h4>{{faker "hacker.adjective"}}</h4>
+					
+
+					<hr class='short br-lighter' />
+
+					<h6>Why me</h6>
+
+					<h4>{{faker "hacker.phrase"}}</h4>
+					<p class='lead'>{{faker "commerce.productDescription"}}</p>
+
+				</div>
+			</div>
+		</div>
+		<div class='col-md-8'>
+
+			<div class='tab-block'>
+				<ul class='nav nav-tabs'>
+					<li class='active'>
+						<a href='#tab1' data-toggle='tab'>My Feed</a>
+					</li>
+					<li>
+						<a href='#tab1' data-toggle='tab'>Favorites</a>
+					</li>
+					<li>
+						<a href='/user' data-toggle='tab'>High 5!</a>
+					</li>
+				</ul>
+				{{> user-feed }}
+			</div>
+		</div>
+	</div>
+</section>
