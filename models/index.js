@@ -10,29 +10,46 @@ const User = require('./User');
 /*================User Relations================*/
 /*==============================================*/
 
+/*User can create many posts (one to many )*/
 User.hasMany(Post, {
     foreignKey: 'user_id'
 });
 
+/*creates an association between the post and the user. 
+The foreign key is added on the post.*/
 Post.belongsTo(User, {
     foreignKey: 'user_id',
     onDelete: "cascade"
 });
 
+/*User can comment on many posts (one to many )*/
+User.hasMany(Comment, {
+    foreignKey: 'user_id',
+    onDelete: "cascade"
+});
+
+/*creates an association between the comment and the user. 
+The foreign key is added on the comment.*/
 Comment.belongsTo(User, {
     foreignKey: 'user_id',
     onDelete: "cascade"
 });
+/*==============================================*/
+/*================Post Relations================*/
+/*==============================================*/
+
+
+/*==============================================*/
+/*================Comments Relations================*/
+/*==============================================*/
+
 
 Comment.belongsTo(Post, {
     foreignKey: 'post_id',
     onDelete: "cascade"
 });
 
-User.hasMany(Comment, {
-    foreignKey: 'user_id',
-    onDelete: "cascade"
-});
+
 
 Post.hasMany(Comment, {
     foreignKey: 'post_id',
