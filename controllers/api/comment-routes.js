@@ -1,6 +1,6 @@
 const router = require("express").Router();
 //import necessary models
-//const { Comment } = require("../../models");
+const { Comment } = require("../../models");
 //const withAuth = require("../../utils/auth");
 
 //get all comments
@@ -16,7 +16,7 @@ router.get("/", (req, res) => {
 router.post("/", (req, res) => {
   // expects => {comment_text: "This is the comment", user_id: 1, post_id: 2}
   Comment.create({
-    comment_text: req.body.comment_text,
+    text: req.body.text,
     user_id: req.session.user_id,
     post_id: req.body.post_id,
   })

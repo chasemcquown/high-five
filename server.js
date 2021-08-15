@@ -29,13 +29,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
 //TODO: Uncomment section below once seeds and models are complete
-//sequelize.sync({ force: false }).then(() => {
-// app.listen(PORT, () => console.log("Now listening"));
-//});
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log("Now listening"));
+});
 
 //TODO: Remove port below once models and seeds are complete
-app.listen(PORT, () => console.log("Now listening"));
-
-app.get("/", (req, res) => {
-  res.send("hello");
-});
+//app.listen(PORT, () => console.log("Now listening"));
