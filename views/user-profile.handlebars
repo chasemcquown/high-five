@@ -1,27 +1,31 @@
-<link
-	href='/public/stylesheets/profile.css'
-	rel='stylesheet'
-/>
+{{!-- <ol class="post-list">
+  {{#each posts as |post|}}
+  <li>
+    {{> post-info post }}
+  </li>
+  {{/each}}
+</ol> --}}
+
+<link href='/public/stylesheets/profile.css' rel='stylesheet' />
 <section id='content' class='container'>
 	<!-- Begin .page-heading -->
 	<div class='page-heading'>
 		<div class='media clearfix'>
 			<div class='media-left pr30'>
-				{{!-- <a href='#'>
+				{{! <a href='#'>
 					<img
 						class='media-object mw150'
 						src='https://bootdey.com/img/Content/avatar/avatar7.png'
 						alt='...'
 					/>
-				</a> --}}
-				{{faker "image.avatar"}}
+				</a> }}
+
 			</div>
 			<div class='media-body va-m'>
-				<h2 class='media-heading'>{{faker "name.findName"}}
+				<h2 class='media-heading'>John Doe
 					<small> - Profile</small>
 				</h2>
-				
-				
+
 			</div>
 		</div>
 	</div>
@@ -34,14 +38,29 @@
 					<span class='panel-icon'>
 						<i class='fa fa-trophy'></i>
 					</span>
-					<span class='panel-title'> My Interests</span>
+					<h3><span class='panel-title'> My Interests</span></h3>
 				</div>
 				<div class='panel-body pb5'>
-					<span class='label label-warning mr5 mb10 ib lh15'>{{faker "company.bsBuzz"}}</span>
-					<span class='label label-primary mr5 mb10 ib lh15'>{{faker "hacker.noun"}}</span>
-					<span class='label label-info mr5 mb10 ib lh15'>{{faker "address.city"}}</span>
-					<span class='label label-success mr5 mb10 ib lh15'>{{faker "company.catchPhraseNoun"}}</span>
-					<span class='label label-alert mr5 mb10 ib lh15'>{{faker "random.word"}}</span>
+					<div class='row'><span
+							class='label label-warning mr5 mb10 ib lh15'
+							id='reading'
+						>reading</span></div>
+					<div class='row'><span
+							class='label label-primary mr5 mb10 ib lh15'
+							id='eating'
+						>eating</span></div>
+					<div class='row'><span
+							class='label label-info mr5 mb10 ib lh15'
+							id='drinking'
+						>drinking</span></div>
+					<div class='row'><span
+							class='label label-success mr5 mb10 ib lh15'
+							id='sports'
+						>sports</span></div>
+					<div class='row'><span
+							class='label label-alert mr5 mb10 ib lh15'
+							id='games'
+						>games</span></div>
 
 				</div>
 			</div>
@@ -50,31 +69,29 @@
 					<span class='panel-icon'>
 						<i class='fa fa-pencil'></i>
 					</span>
-					<span class='panel-title'>About Me</span>
+					<h3><span class='panel-title'>About Me</span></h3>
 				</div>
 				<div class='panel-body pb5'>
 
 					<h6>What I do</h6>
 
-					<h4>{{faker "company.name"}}</h4>
+					<h4>Company Name</h4>
 					<p class='text-muted'>
-						{{faker "catchPhrase"}}
-						{{faker "catchPhraseDescriptor"}}
+						Job Title
 					</p>
 
 					<hr class='short br-lighter' />
 
 					<h6>Who I am</h6>
 
-					<h4>{{faker "hacker.adjective"}}</h4>
-					
+					<h4>Talents</h4>
 
 					<hr class='short br-lighter' />
 
 					<h6>Why me</h6>
 
-					<h4>{{faker "hacker.phrase"}}</h4>
-					<p class='lead'>{{faker "commerce.productDescription"}}</p>
+					<h4>Things I like</h4>
+					<p class='lead'>Describe Me</p>
 
 				</div>
 			</div>
@@ -84,16 +101,16 @@
 			<div class='tab-block'>
 				<ul class='nav nav-tabs'>
 					<li class='active'>
-						<a href='#tab1' data-toggle='tab'>My Feed</a>
+						<a href='/comments' data-toggle='tab'>My Feed</a>
 					</li>
 					<li>
-						<a href='#tab1' data-toggle='tab'>Favorites</a>
+						<a href='/likes' data-toggle='tab'>Favorites</a>
 					</li>
 					<li>
 						<a href='/user' data-toggle='tab'>High 5!</a>
 					</li>
 				</ul>
-				{{> user-feed }}
+				{{!-- {{> user-feed }} --}}
 			</div>
 		</div>
 	</div>
