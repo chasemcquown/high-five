@@ -24,22 +24,14 @@ router.get('/:id', (req,res) => {
         },
         include: [
             {
-                model: Post,
-                attributes: ['id', 'title', 'post_url', 'created_at']
+                // include users interests (interest model)
+                model: Interest,
+                attributes: ['interest1', 'interest2', 'interest3', 'interest4', 'interest5']
             },
             {
-                model: Like,
-                attributes: ['']
-            },
-            {
-                model: Comment,
-                attributes: ['id', 'comment_text', 'created_at']
-            },
-            {
-                model: UserInterest,
-                attributes: ['interest'],
-                through: Interst,
-                as: 'usersInterests'
+                // include how many followers user has (followers model)
+                model: Follower,
+                attributes: ['follower_id']
             }
         ]
 
