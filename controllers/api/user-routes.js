@@ -1,7 +1,7 @@
 // import dependecies
 const router = require('express').Router();
 
-const { User, Post, interest } = require('../../models');
+const { User, Post, Comment, Like, Interest } = require('../../models');
 
 // get all users for main page cards
 router.get('/', (req, res) => {
