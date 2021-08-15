@@ -1,7 +1,7 @@
 // import dependecies
 const router = require('express').Router();
 
-const { User } = require('../../models');
+const { User, Post } = require('../../models');
 
 // get all users for main page cards
 router.get('/', (req, res) => {
@@ -28,11 +28,26 @@ router.get('/:id', (req,res) => {
                 model: Interest,
                 attributes: ['interest1', 'interest2', 'interest3', 'interest4', 'interest5']
             },
+            // {
+            //     // include how many followers user has (followers model)
+            //     model: Follower,
+            //     attributes: ['follower_id']
+            // },
             {
-                // include how many followers user has (followers model)
-                model: Follower,
-                attributes: ['follower_id']
-            }
+                // include user's post
+                model: Post,
+                attributes: ['id', 'title', 'content']
+            },
+            {
+                // include user's post
+                model: Comment,
+                attributes: ['id', 'text', 'post_id']
+            },
+            {
+                // include user's post
+                model: Like,
+                attributes: ['id', 'text', 'post_id']
+          }
         ]
 
     })
