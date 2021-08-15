@@ -34,8 +34,4 @@ app.use(express.static(path.join(__dirname, 'public')));
 //});
 
 //TODO: Remove port below once models and seeds are complete
-app.listen(PORT, () => console.log('Now listening'));
-
-app.get('/', (req, res) => {
-	res.send('hello');
-});
+app.listen(PORT, () => console.log(`http://localhost:${PORT}`));

@@ -4,7 +4,7 @@ const apiRoutes = require('./api');
 router.use('/api', apiRoutes);
 
 router.use((req, res) => {
-	res.send('<h1>High 5! is working</h1>');
+	res.status(404).end();
 });
 
 module.exports = router;
