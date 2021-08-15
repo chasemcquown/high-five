@@ -4,7 +4,7 @@ const signupBtn = document.querySelector('#signupBtn');
 // identify button wrapper
 const buttonWrapper = document.querySelector("#wrapper")
 
-// create an array to store user's chosen interests
+// create an array to store user's interests
 const usersInterestsArray = [];
 
 // send user's info to database
