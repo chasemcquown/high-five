@@ -21,7 +21,7 @@ async function handleLogin(event) {
             headers: { 'Content-Type' : 'application/json'}
         })
         if (response.ok) {
-            document.location.replace('/home');
+            document.location.replace('/user-feed');
         } else {
             alert(response.statusText);
         }
