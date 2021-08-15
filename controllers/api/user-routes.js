@@ -1,7 +1,7 @@
 // import dependecies
 const router = require("express").Router();
 
-const { User, Post, Comment, Interest } = require("../../models");
+const { User, Post, Comment, Like, Interest } = require("../../models");
 
 // get all users for main page cards
 router.get("/", (req, res) => {
@@ -34,10 +34,25 @@ router.get("/:id", (req, res) => {
           "interest5",
         ],
       },
+      // {
+      //     // include how many followers user has (followers model)
+      //     model: Follower,
+      //     attributes: ['follower_id']
+      // },
       {
-        // include how many followers user has (followers model)
-        model: Follower,
-        attributes: ["follower_id"],
+        // include user's post
+        model: Post,
+        attributes: ["id", "title", "content"],
+      },
+      {
+        // include user's post
+        model: Comment,
+        attributes: ["id", "text", "post_id"],
+      },
+      {
+        // include user's post
+        model: Like,
+        attributes: ["id", "text", "post_id"],
       },
     ],
   })
@@ -58,17 +73,18 @@ router.post("/", (req, res) => {
   // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
   User.create({
     username: req.body.username,
-    email: req.body.email,
+    //   email: req.body.email,
     password: req.body.password,
   })
     .then((dbUserData) => {
-      req.session.save(() => {
-        req.session.user_id = dbUserData.id;
-        req.session.username = dbUserData.username;
-        req.session.loggedIn = true;
+      // req.session.save(() => {
+      //   req.session.user_id = dbUserData.id;
+      //   req.session.username = dbUserData.username;
+      //   req.session.loggedIn = true;
 
-        res.json(dbUserData);
-      });
+      //   res.json(dbUserData);
+      // });
+      res.json(dbUserData);
     })
     .catch((err) => {
       console.log(err);
