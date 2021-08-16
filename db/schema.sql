@@ -3,4 +3,3 @@ DROP DATABASE IF EXISTS highfive_db;
 
 -- CREATE DATABASE
 CREATE DATABASE highfive_db;
-
