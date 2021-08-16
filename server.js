@@ -14,6 +14,10 @@ const PORT = process.env.PORT || 3001;
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
+const Handlebars = require('handlebars');
+const FakerHandlebarsHelper = require('handlebars-faker');
+Handlebars.registerHelper('faker', FakerHandlebarsHelper);
+
 //const helpers = require("./utils/helpers");
 
 /*

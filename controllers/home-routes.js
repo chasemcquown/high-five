@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 const { Post, User, Comment, Vote } = require('../models');
 
 router.get('/', (req, res) => {
-	res.render('sign-up');
+	res.render('user-profile');
 });
 router.get('/user-feed', (req, res) => {
 	res.render('user-profile');
