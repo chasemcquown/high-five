@@ -5,6 +5,9 @@ const { Post, User, Comment, Vote } = require("../models");
 router.get("/", (req, res) => {
   res.render("sign-up");
 });
+router.get("/user-feed", (req, res) => {
+  res.render("user-feed");
+});
 /*
 // get all posts for homepage
 router.get("/", (req, res) => {
