@@ -20,7 +20,19 @@
 					similar interests as you. Sign up today!
 				</p>
                 <div class="interests-buttons">
-                    {{> interest-buttons interests}
+                    {{!-- {{> interest-buttons interests}} --}}
+					<div class="wrapper">
+						<button id="reading">reading</button>
+						<button id="eating">eating</button>
+						<button id="drinking">drinking</button>
+						<button id="sports">sports</button>
+						<button id="games">games</button>
+						<button id="coding">coding</button>
+						<button id="exercise">exercise</button>
+						<button id="movies">movies</button>
+						<button id="travel">travel</button>
+						<button id="animals">animals</button>
+					</div>
                 </div>
 
 				<form class='form-horizontal' role='form'>
@@ -55,7 +67,7 @@
 
 					<div class='form-group'>
 						<div class='col-sm-offset-2 col-sm-10'>
-							<button type='submit' class='btn btn-default'>Sign up</button>
+							<button id="signupBtn" type='submit'  class='btn btn-default'>Sign up</button>
 						</div>
 					</div>
 				</form>
@@ -63,3 +75,5 @@
 		</div>
 	</div>
 </div>
+
+<script src="/javascript/sign-up.js"></script>
