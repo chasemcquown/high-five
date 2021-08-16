@@ -59,6 +59,7 @@ async function handleInterests(event) {
     } else {
         alert(response.statusText);
     }
+    }
 }
 // add event listener to sign up button, then execute function to send user info to database
 signupBtn.addEventListener("click", signupHandler);
