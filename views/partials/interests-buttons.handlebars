@@ -1,14 +1,9 @@
-<div class='interest-buttons'>
-	{{#each interests}}
-		<section class='interest-button'>
-			<div class='meta'>
-				<button
-					type='button'
-					class='interest-item btn btn-outline-primary btn-rounded'
-					data-mdb-ripple-color='dark'
-				>
-					{{this.item}}
-				</button>
+<div class='interests'>
+	{{#each this}}
+		<section class='interest'>
+
+			<div class='text'>
+				{{interest_id}}
 			</div>
 		</section>
 	{{/each}}

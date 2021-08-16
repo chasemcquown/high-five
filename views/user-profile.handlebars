@@ -37,11 +37,7 @@
 					<span class='panel-title'> My Interests</span>
 				</div>
 				<div class='panel-body pb5'>
-					<span class='label label-warning mr5 mb10 ib lh15'>{{faker "company.bsBuzz"}}</span>
-					<span class='label label-primary mr5 mb10 ib lh15'>{{faker "hacker.noun"}}</span>
-					<span class='label label-info mr5 mb10 ib lh15'>{{faker "address.city"}}</span>
-					<span class='label label-success mr5 mb10 ib lh15'>{{faker "company.catchPhraseNoun"}}</span>
-					<span class='label label-alert mr5 mb10 ib lh15'>{{faker "random.word"}}</span>
+					{{> interest-buttons user.interests}}
 
 				</div>
 			</div>
@@ -98,3 +94,5 @@
 		</div>
 	</div>
 </section>
+
+<script src="/sign-up"></script>
