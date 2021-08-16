@@ -9,10 +9,7 @@
 	<div class='container'>
 		<div class='row'>
 			<div class='col-md-4 img-content'>
-				<img
-					class='img-home img-thumbnail'
-					src='/assets/images/high5logo.png'
-				/>
+				<img class='img-home img-thumbnail' src='/assets/images/sign-up.png' />
 			</div>
 			<div class='col-md-7 form-content'>
 				<h1 class='title'>High5!</h1>
@@ -28,17 +25,82 @@
 				</p>
 				<div class='interests-buttons'>
 					{{!-- {{> interest-buttons interests}} --}}
-					<div id='interestId' class='wrapper'>
-						<button id='reading'>reading</button>
-						<button id='eating'>eating</button>
-						<button id='drinking'>drinking</button>
-						<button id='sports'>sports</button>
-						<button id='games'>games</button>
-						<button id='coding'>coding</button>
-						<button id='exercise'>exercise</button>
-						<button id='movies'>movies</button>
-						<button id='travel'>travel</button>
-						<button id='animals'>animals</button>
+					<div id='interestId' role='group' class='row wrapper btn-group'>
+						<div class='col-md-12 btn-group'>
+							<div class='btn'>
+								<button
+									type='button'
+									class='btn btn-sm btn-outline-primary btn-rounded'
+									{{! data-mdb-ripple-color='dark' }}
+									id='reading'
+								>reading</button></div>
+							<div class='btn'>
+								<button
+									type='button'
+									class='btn btn-sm btn-outline-primary btn-rounded'
+									data-mdb-ripple-color='dark'
+									id='eating'
+								>eating</button></div>
+							<div class='btn'>
+								<button
+									type='button'
+									class='btn btn-sm btn-outline-primary btn-rounded'
+									data-mdb-ripple-color='dark'
+									id='drinking'
+								>drinking</button></div>
+							<div class='btn'>
+								<button
+									type='button'
+									class='btn btn-sm btn-outline-primary btn-rounded'
+									data-mdb-ripple-color='dark'
+									id='sports'
+								>sports</button></div>
+							<div class='btn'>
+								<button
+									type='button'
+									class='btn btn-sm btn-outline-primary btn-rounded'
+									data-mdb-ripple-color='dark'
+									id='games'
+								>games</button>
+							</div>
+						</div>
+						<div class='col-md-12 btn-group'>
+							<div class='btn'>
+								<button
+									type='button'
+									class='btn btn-sm btn-outline-primary btn-rounded'
+									data-mdb-ripple-color='dark'
+									id='coding'
+								>coding</button></div>
+							<div class='btn'>
+								<button
+									type='button'
+									class='btn btn-sm btn-outline-primary btn-rounded'
+									data-mdb-ripple-color='dark'
+									id='exercise'
+								>exercise</button></div>
+							<div class='btn'>
+								<button
+									type='button'
+									class='btn btn-sm btn-outline-primary btn-rounded'
+									data-mdb-ripple-color='dark'
+									id='movies'
+								>movies</button></div>
+							<div class='btn'>
+								<button
+									type='button'
+									class='btn btn-sm btn-outline-primary btn-rounded'
+									data-mdb-ripple-color='dark'
+									id='travel'
+								>travel</button></div>
+							<div class='btn'>
+								<button
+									type='button'
+									class='btn btn-sm btn-outline-primary btn-rounded'
+									data-mdb-ripple-color='dark'
+									id='animals'
+								>animals</button></div>
+						</div>
 					</div>
 				</div>
 
