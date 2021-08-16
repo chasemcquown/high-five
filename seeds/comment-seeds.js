@@ -30,13 +30,13 @@ const commentdata = [
   {
     comment_text: "Vivamus vestibulum sagittis sapien.",
     user_id: 7,
-    post_id: 5,
+    post_id: 3,
   },
   {
     comment_text:
       "Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
     user_id: 6,
-    post_id: 7,
+    post_id: 3,
   },
 ];
 
