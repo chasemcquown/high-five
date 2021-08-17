@@ -1,0 +1,115 @@
+body {
+	background: #eee;
+}
+
+.card {
+	background-image: url('https://i.imgur.com/5ehnBAe.jpg');
+	color: white;
+	width: 280px;
+	border-radius: 10px;
+}
+
+.info {
+	text-align: center;
+	font-size: 13px;
+}
+
+.form-group {
+	margin-top: 25px;
+}
+
+.form {
+	border-bottom-left-radius: 0px !important;
+	border-bottom-right-radius: 0px !important;
+}
+
+.btn {
+	background: #4527a0;
+	color: white;
+	border-radius: 20px;
+	font-size: 14px;
+	width: 100%;
+}
+
+.strech {
+	font-size: 11px;
+	margin-top: 15px;
+}
+
+.else {
+	font-size: 9px;
+	border-bottom: 1px solid #000;
+	line-height: 0.1em;
+	margin: 10px 0 20px;
+	text-align: center;
+}
+
+.else2 {
+	padding: 0 10px;
+	background-image: url('https://i.imgur.com/5ehnBAe.jpg');
+}
+
+.fb {
+	background: 3b5998;
+	color: white;
+	border-radius: 25px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.fb:hover {
+	background: rgb(77, 183, 254);
+}
+
+.ggl {
+	background: #fff;
+	border-radius: 25px;
+	color: red;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.ggl:hover {
+	background: #fff;
+	color: red;
+}
+@import url(https://fonts.googleapis.com/css?family=Calibri:400,300,700);
+
+body {
+	text-align: center;
+	font-family: 'Calibri', sans-serif !important;
+	background-color: #55b9f3;
+}
+
+.social-buttons {
+	margin-top: 200px;
+}
+
+.social-buttons button {
+	margin-right: 10px;
+}
+
+.neo-button {
+	width: 70px;
+	height: 70px;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	border-radius: 11px;
+	background: linear-gradient(145deg, #5bc6ff, #4da7db);
+	box-shadow: 6px 6px 13px #489dcf, -6px -6px 13px #62d5ff;
+}
+
+.neo-button:hover {
+	width: 70px;
+	height: 70px;
+	border: none;
+	outline: none;
+	border-radius: 11px;
+	background: linear-gradient(145deg, #4da7db, #5bc6ff);
+	box-shadow: inset 6px 6px 13px #489dcf, inset -6px -6px 13px #62d5ff;
+}
+
+.neo-button .fa {
+	color: #eee;
+}

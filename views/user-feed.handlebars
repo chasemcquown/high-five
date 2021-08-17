@@ -1,0 +1,37 @@
+<link href='/public/stylesheets/user-feed.css' rel='stylesheet' />
+
+<div class='container bootdey'>
+	<div class='row'>
+		<div class='col-md-4'>
+			{{#each this}}
+			<div class='well well-white mini-profile-widget'>
+				<div class='image-container'>
+					<a href="/"><img
+						src='https://bootdey.com/img/Content/avatar/avatar1.png'
+						class='avatar img-responsive'
+						alt='avatar'
+					/>
+					</a>
+				</div>
+				<div class='details'>
+					<h4>{{user}}</h4>
+					<hr />
+					{{!-- {{> interests user.interests_id}} --}}
+					{{!-- <div class='mg-top-10'>32 Followers | 120 Following | 18 Posts</div> --}}
+					<p class='mg-top-20'>
+						<a href='javascript:void(0);' class='btn btn-blue'>
+							<i class='fa fa-facebook fa-fw'></i>
+						</a>
+						<a href='javascript:void(0);' class='btn btn-info'>
+							<i class='fa fa-twitter fa-fw'></i>
+						</a>
+						<a href='javascript:void(0);' class='btn btn-red'>
+							<i class='fa fa-google-plus fa-fw'></i>
+						</a>
+					</p>
+				</div>
+			</div>
+		</div>
+{{/each}}
+	</div>
+</div>
