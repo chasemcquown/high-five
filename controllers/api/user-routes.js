@@ -1,7 +1,8 @@
 // import dependecies
 const router = require("express").Router();
 
-const { User, Post, Comment, Like, Interest } = require("../../models");
+//const { like } = require("sequelize/types/lib/operators");
+const { User, Post, Comment, Likes, Interest } = require("../../models");
 
 // get all users for main page cards
 router.get("/", (req, res) => {
@@ -26,34 +27,28 @@ router.get("/:id", (req, res) => {
       {
         // include users interests (interest model)
         model: Interest,
-        attributes: [
-          "interest1",
-          "interest2",
-          "interest3",
-          "interest4",
-          "interest5",
-        ],
+        attributes: ["Interest_Category"],
       },
-      // {
+      //{
       //     // include how many followers user has (followers model)
       //     model: Follower,
       //     attributes: ['follower_id']
       // },
       {
         // include user's post
-        model: Post,
-        attributes: ["id", "title", "content"],
+      model: Post,
+      attributes: ["id", "title", "content"],
       },
       {
-        // include user's post
-        model: Comment,
-        attributes: ["id", "text", "post_id"],
+        // include user's post comments
+      model: Comment,
+      attributes: ["id", "comment_text", "post_id"],
       },
       {
-        // include user's post
-        model: Like,
-        attributes: ["id", "text", "post_id"],
-      },
+        // include user's post likes
+      model: Likes,
+      attributes: ["id", "post_id"],
+      }
     ],
   })
     .then((userInfo) => {
@@ -63,7 +58,7 @@ router.get("/:id", (req, res) => {
       res.json(userInfo);
     })
     .catch((err) => {
-      console.log(err);
+      console.log("Opps! "+err);
       res.status(500).json(err);
     });
 });

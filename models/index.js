@@ -1,5 +1,5 @@
 const Comment = require('./comment');
-// const Relationship=require('./Follower');
+const Relationship=require('./Follower');
 const Interest=require('./interest');
 const Likes=require('./likes');
 const Post=require('./Post');
@@ -112,4 +112,4 @@ Comment.belongsTo(Post,
         onDelete: "cascade"
     })
 
-module.exports = { User, Post, Comment,Likes, Interest};
+module.exports = { User, Post, Comment,Likes, Interest,UserInterest};
