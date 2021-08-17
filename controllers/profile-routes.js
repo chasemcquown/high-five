@@ -1,7 +1,7 @@
 // imports
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { Post, Comment, Like, userInterest } = require('../models');
+const { Post, Comment, Like, user_Interest} = require('../models');
 const withAuth = require('../utils/auth');
 
 // get all user's posts, an inlcude comments and likes for each post
