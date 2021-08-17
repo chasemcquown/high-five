@@ -20,7 +20,7 @@ Handlebars.registerHelper('faker', FakerHandlebarsHelper);
 
 //const helpers = require("./utils/helpers");
 
-/*
+
 const sess = {
   secret: "Super secret secret",
   cookie: {},
@@ -31,7 +31,7 @@ const sess = {
   }),
 };
 app.use(session(sess));
-*/
+
 // we pass this file to hbs in order to use the functionality within the helpers.js file
 
 app.engine('handlebars', hbs.engine);
