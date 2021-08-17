@@ -15,7 +15,7 @@ router.get("/", (req, res) => {
     });
 });
 
-// get a single user for a user's profile page
+// // get a single user for a user's profile page
 router.get("/:id", (req, res) => {
   User.findOne({
     attributes: { exclude: ["password"] },
@@ -98,7 +98,7 @@ router.post("/login", (req, res) => {
   // expects {email: 'lernantino@gmail.com', password: 'password1234'}
   User.findOne({
     where: {
-      email: req.body.email,
+      username: req.body.username,
     },
   }).then((dbUserData) => {
     if (!dbUserData) {

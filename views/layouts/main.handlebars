@@ -26,7 +26,7 @@
 		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 		<title>High 5!</title>
 		{{!-- {{#each stylesheets}} --}}
-		<link rel='stylesheet' href='/public/stylesheets/user-profile.css' />
+		<link rel='stylesheet' href='/stylesheets/user-profile.css' />
 		{{!-- {{/each}} --}}
 	</head>
 
@@ -34,23 +34,23 @@
 		<div class='wrapper'>
 			<header>
 				<h1>
-					<a href='/'>High5!</a>
+					{{!-- <a href='/'>High5!</a> --}}
 				</h1>
-				<nav>
+				{{!-- <nav>
 					{{#if loggedIn}}
 						<a href='/dashboard'>dashboard</a>
 						<button id='logout' class='btn-no-style'>logout</button>
 					{{else}}
 						<a href='/login'>login</a>
 					{{/if}}
-				</nav>
+				</nav> --}}
 			</header>
 			<main>
 				{{{body}}}
 			</main>
-			<footer>
+			{{!-- <footer>
 				Thanks for visiting!
-			</footer>
+			</footer> --}}
 		</div>
 
 		{{#if loggedIn}}

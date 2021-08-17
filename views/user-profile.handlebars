@@ -93,13 +93,13 @@
 			<div class='tab-block'>
 				<ul class='nav nav-tabs'>
 					<li class='active'>
-						<a href='#tab1' data-toggle='tab'>My Feed</a>
+						<a href='/views/user-profile.handlebars' data-toggle='tab'>Add Post</a>
 					</li>
 					<li>
-						<a href='#tab1' data-toggle='tab'>Favorites</a>
+						<a href='/views/comment.handlebars' data-toggle='tab'>Comments</a>
 					</li>
 					<li>
-						<a href='/user' data-toggle='tab'>High 5!</a>
+						<a href='/views/user-feed.handlebars' data-toggle='tab'>user-feed</a>
 					</li>
 				</ul>
 				{{!-- {{> user-feed }} --}}
@@ -108,5 +108,6 @@
 	</div>
 </section>
 
-<script src="/sign-up"></script>
-<script src="/public/javascript/user-feed.js"></script>
+<script src="/javascript/add-post.js"></script>
+<script src="/javascript/comment.js"></script>
+<script src="/javascript/user-feed.js"></script>
