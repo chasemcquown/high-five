@@ -2,7 +2,7 @@
 const router = require("express").Router();
 
 //const { like } = require("sequelize/types/lib/operators");
-const { User, Post, Comment, Like, Interest } = require("../../models");
+const { User, Post, Comment, Likes, Interest } = require("../../models");
 
 // get all users for main page cards
 router.get("/", (req, res) => {
@@ -44,6 +44,11 @@ router.get("/:id", (req, res) => {
         // include user's post comments
       model: Comment,
       attributes: ["id", "comment_text", "post_id"],
+      },
+      {
+        // include user's post likes
+      model: Likes,
+      attributes: ["id", "post_id"],
       }
     ],
   })
