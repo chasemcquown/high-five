@@ -1,7 +1,7 @@
 // identify login button 
-const loginButton = document.querySelector('loginBtn');
+const loginButton = document.querySelector('#loginBtn');
 // identify sign up button
-const signUpButton = document.querySelector('signUpBtn');
+const signUpButton = document.querySelector('#signUpBtn');
 
 async function handleLogin(event) {
 
