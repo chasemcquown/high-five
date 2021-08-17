@@ -27,7 +27,7 @@ router.get("/:id", (req, res) => {
       {
         // include users interests (interest model)
         model: Interest,
-        attributes: ["Interest_Category"    
+        attributes: ["Interest_Category"
         ],
       },
       // {
