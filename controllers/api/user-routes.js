@@ -30,22 +30,21 @@ router.get("/:id", (req, res) => {
         attributes: ["Interest_Category"
         ],
       },
-      // {
+      //{
       //     // include how many followers user has (followers model)
       //     model: Follower,
       //     attributes: ['follower_id']
       // },
-      //{
+      {
         // include user's post
-        //model: Post,
-       // attributes: ["id", "title", "content"],
-      //},
-    //  {
-        // include user's post
-       // model: Comment,
-        //attributes: ["id", "text", "post_id"],
-      //}
-      
+      model: Post,
+      attributes: ["id", "title", "content"],
+      },
+      {
+        // include user's post comments
+      model: Comment,
+      attributes: ["id", "comment_text", "post_id"],
+      }
     ],
   })
     .then((userInfo) => {
