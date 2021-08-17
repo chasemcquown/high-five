@@ -35,21 +35,17 @@ router.get("/:id", (req, res) => {
       //     model: Follower,
       //     attributes: ['follower_id']
       // },
-      {
+      //{
         // include user's post
-        model: Post,
-        attributes: ["id", "title", "content"],
-      },
-      {
+        //model: Post,
+       // attributes: ["id", "title", "content"],
+      //},
+    //  {
         // include user's post
-        model: Comment,
-        attributes: ["id", "text", "post_id"],
-      },
-      {
-        // include user's post
-        model: Like,
-        attributes: ["id", "text", "post_id"],
-      },
+       // model: Comment,
+        //attributes: ["id", "text", "post_id"],
+      //}
+      
     ],
   })
     .then((userInfo) => {

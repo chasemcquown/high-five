@@ -1,4 +1,4 @@
-const { userInterest } = require("../models");
+const { UserInterest } = require("../models");
 
 const UIdata = [
   {
@@ -6,7 +6,7 @@ const UIdata = [
     interest_id:1
   },
   {
-    user_id:2,
+    user_id:1,
     interest_id:2
   },
   {
@@ -20,6 +20,6 @@ const UIdata = [
  
 ];
 
-const seedUserInterest = () => userInterest.bulkCreate(UIdata);
+const seedUserInterest = () => UserInterest.bulkCreate(UIdata);
 
 module.exports = seedUserInterest;
