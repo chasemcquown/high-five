@@ -47,7 +47,7 @@ router.get("/:id", (req, res) => {
       },
       {
         // include user's post
-        model: like,
+        model: Like,
         attributes: ["id", "text", "post_id"],
       },
     ],
@@ -59,7 +59,7 @@ router.get("/:id", (req, res) => {
       res.json(userInfo);
     })
     .catch((err) => {
-      console.log(err);
+      console.log("Opps! "+err);
       res.status(500).json(err);
     });
 });

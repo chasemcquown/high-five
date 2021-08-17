@@ -38,26 +38,11 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-<<<<<<< HEAD
-app.use(express.static(path.join(__dirname, "public")));
-
-//TODO: Uncomment section below once seeds and models are complete
-//sequelize.sync({ force: false }).then(() => {
-// app.listen(PORT, () => console.log("Now listening"));
-//});
-
-//TODO: Remove port below once models and seeds are complete
-app.listen(PORT, () => console.log("Now listening"));
-
-app.get("/", (req, res) => {
-  res.send("hello");
-=======
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(require('./controllers/'));
 //TODO: Uncomment section below once seeds and models are complete
 sequelize.sync({ force: false }).then(() => {
 	app.listen(PORT, () => console.log(`http://localhost:${PORT}`));
->>>>>>> test-development
 });
 
 //TODO: Remove port below once models and seeds are complete
