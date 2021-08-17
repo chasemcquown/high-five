@@ -1,6 +1,7 @@
 async function interests() {
 	var template = Handlebars.templates['interests'];
 
+	//first fetch everything from a db into a array
 	var context = {
 		interests: [
 			{ item: 'Reading', value: 'Reading' },

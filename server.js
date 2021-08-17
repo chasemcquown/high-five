@@ -46,4 +46,4 @@ sequelize.sync({ force: false }).then(() => {
 });
 
 //TODO: Remove port below once models and seeds are complete
-//app.listen(PORT, () => console.log("Now listening"));
+///app.listen(PORT, () => console.log("Now listening"));
