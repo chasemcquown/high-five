@@ -1,3 +1,5 @@
+// possible routes from login page --> user feed, and sign-up page
+
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 

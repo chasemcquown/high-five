@@ -1,5 +1,5 @@
 <section id='user' class='container'>
-	{{!-- {{#each user}} --}}
+	{{#each users}}
 	<div class='main-body user'>
 		<div
 			class='row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 gutters-sm'
@@ -20,7 +20,7 @@
 						/>
 						<h5 class='card-title'>{{username}}</h5>
 						
-						<p class='text-muted font-size-sm'>{{> Interest_Category}} </p>
+						{{!-- <p class='text-muted font-size-sm'>{{> Interest_Category}} </p> --}}
 
 					
 
@@ -53,9 +53,10 @@
 		</div>
 
 	</div>
+	{{/each}}
 	{{!-- {{else}}
 	<p> No Users Available</p>
-	{{/each}} --}}
+	{{/each}}
 
 </section>
 {{!-- 	

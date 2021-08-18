@@ -1,8 +1,9 @@
 const router = require('express').Router();
-const sequelize = require('../config/connection');
+// const sequelize = require('../config/connection');
 const { User, userInterest } = require('../models');
 
 // get all users for user-feed page
+// at this end point, we will retrieve this data
 router.get('/', (req,res) => {
     User.findAll({
         attributes: [
@@ -11,7 +12,8 @@ router.get('/', (req,res) => {
         ]
     })
     .then(userData => {
-        const posts = userData.map(user => user.get({ plain: true }));
+
+        const users = userData.map(user => user.get({ plain: true }));
   
         res.render('user-feed', {
           users,
@@ -30,12 +32,12 @@ router.get('/user/:id', (req,res) => {
         where: {
             id: req.params.id
         },
-        include: [
-            {
-                model: userInterst,
-                attributes: ['id', 'user_id', 'interest_id']
-            }
-        ]
+        // include: [
+        //     {
+        //         model: userInterst,
+        //         attributes: ['id', 'user_id', 'interest_id']
+        //     }
+        // ]
     })
     .then(userData => {
         if (!userData) {
