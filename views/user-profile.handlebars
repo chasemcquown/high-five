@@ -17,7 +17,7 @@
 			</div>
 			<div class='media-body va-m'>
 				<h2 class='media-heading'>
-					{{username}}
+					{{user.username}}
 					
 				</h2>
 				
@@ -41,11 +41,10 @@
 				<div class="col">
 					<div class='panel-body pb5'>
 						
-{{!-- <li>Interest: {{faker "lorem.words" 1}}</li>
-<li>Interest: {{faker "lorem.words" 1}}</li>
-<li>Interest: {{faker "lorem.words" 1}}</li>
-<li>Interest: {{faker "lorem.words" 1}}</li>
-<li>Interest: {{faker "lorem.words" 1}}</li> --}}
+<li>Interest: {{user.interest_id}}</li>
+<li>Interest: {{user.Interest_Category}}</li>
+<li>Interest: {{interest_id}}</li>
+<li>Interest: {{Interest_Category}}</li>
 				</div>
 				</div>
 			</div>
@@ -71,7 +70,7 @@
 					<hr class='short br-lighter' />
 
 					<h5>Who I am</h5>
-<h4>{{faker "hacker.adjective" }}</h4>
+					<p>{{faker "hacker.adjective" }}</p>
 					
 
 					<hr class='short br-lighter' />
@@ -93,10 +92,10 @@
 						<a href='/profile' data-toggle='tab'>Add Post</a>
 					</li>
 					<li>
-						<a href='/views/comment.handlebars' data-toggle='tab'>Comments</a>
+						<a href='/dashboard' data-toggle='tab'>Comments</a>
 					</li>
 					<li>
-						<a href='user-feed' data-toggle='tab'>user-feed</a>
+						<a href="/user-feed" id='user-feed' data-toggle='tab'>user-feed</a>
 					</li>
 				</ul>
 				
@@ -108,3 +107,4 @@
 <script src="/javascript/add-post.js"></script>
 <script src="/javascript/comment.js"></script>
 <script src="/javascript/user-feed.js"></script>
+{{!-- <script src="/javascript/profile.js"></script> --}}

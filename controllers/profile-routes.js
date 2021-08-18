@@ -1,8 +1,14 @@
 // imports
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { User, Post, Comment, Like, user_Interest } = require('../models');
-const withAuth = require('../utils/auth');
+const {
+	User,
+	Post,
+	Comment,
+	Like,
+	UserInterest,
+	Interest,
+} = require('../models');
 
 // get all user's posts, an inlcude comments and likes for each post
 router.get('/', (req, res) => {
@@ -41,6 +47,44 @@ router.get('/', (req, res) => {
 		.then((postInfo) => {
 			const posts = postInfo.map((post) => post.get({ plain: true }));
 			res.render('user-profile', { posts, loggedIn: true });
+		})
+		.catch((err) => {
+			console.log(err);
+			res.status(500).json(err);
+		});
+});
+
+// get a single user and route them to the user-profile page
+router.get('/user/:id', (req, res) => {
+	User.findOne({
+		where: {
+			id: req.params.id,
+		},
+		include: [
+			{
+				model: UserInterest,
+				attributes: ['id', 'user_id', 'interest_id'],
+			},
+		],
+		// include: [
+		// 	{
+		// 		model: Interest,
+		// 		attributes: ['id', 'Interest_Category'],
+		// 	},
+		// ],
+	})
+		.then((userData) => {
+			if (!userData) {
+				res.status(404).json({ message: 'No user found with this id' });
+				return;
+			}
+
+			const user = userData.get({ plain: true });
+
+			res.render('user-profile', {
+				user,
+				loggedIn: req.session.loggedIn,
+			});
 		})
 		.catch((err) => {
 			console.log(err);
