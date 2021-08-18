@@ -1,11 +1,11 @@
-<section id='user' class='container'>
+<section id='user' class='superbox-list constainer-fluid grid'>
 
 	<div class='main-body user'>
 		{{#each users}}
 			<div
-				class='row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 gutters-sm'
+				class='row row-cols-4 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 gutters-sm'
 			>
-				<div class='col mb-3'>
+				<div class='col mb-3 block-grid-xs-2 block-grid-sm-3 block-grid-md-4'>
 					<div class='card'>
 						<img
 							src='/assets/images/sign-up.png'
@@ -14,7 +14,7 @@
 						/>
 						<div class='card-body text-center'>
 							<a href='/feed-routes/user/{{id}}'><img
-									src='https://bootdey.com/img/Content/avatar/avatar4.png'
+									src='https://bootdey.com/img/Content/avatar/avatar{{id}}.png'
 									style='width:120px;margin-top:-95px; border-radius: 15px;'
 									alt='User'
 									class='img-fluid img-thumbnail rounded-corners border-0 mb-3'
@@ -22,7 +22,24 @@
 							<h5 class='card-title'>{{username}}</h5>
 
 							{{!-- <p class='text-muted font-size-sm'>{{> interest_buttons}} </p> --}}
+							<div class='interests'>
+								<div class='interests'>
+									{{!-- {{> interests}} --}}
+									{{!-- {{#each this}}
+										<section class='interest'>
 
+											<div class='text'>
+												{{interest_id}}
+											</div>
+										</section>
+									{{/each}} --}}
+								</div>
+								{{!-- <li>Interest: {{faker 'lorem.words' 1}}</li>
+								<li>Interest: {{faker 'lorem.words' 1}}</li>
+								<li>Interest: {{faker 'lorem.words' 1}}</li>
+								<li>Interest: {{faker 'lorem.words' 1}}</li>
+								<li>Interest: {{faker 'lorem.words' 1}}</li> --}}
+							</div>
 						</div>
 						<div class='card-footer'>
 							<button
