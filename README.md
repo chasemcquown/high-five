@@ -25,7 +25,8 @@ Hello
     <img src="https://img.shields.io/badge/dotenv-green" />
 </p>
 
-# 🔍Description
+🔍 <h4>Designed and coded by <a href="https://github.com/fizzaaz">FIZZA ZAIDI</a></h4>
+
 
 Are you bored? Don't have plans tonight? We have the perfect app for you. This app will help you find a close-knit group of people that you can vent to about your problems or share your excitement about your team winning the championship. If you're new to town or just want to connect with new people join High ✋. High ✋ allows you to create blogs, interact with blogs, and follow current members that have similar interests as you. Sign up today!
 
@@ -59,7 +60,7 @@ To install this code, download the zip file, or use GitHub's guidelines to clone
 
 `npm install express-session`
 
-`npm install connect-session-sequelize`
+`npm install connect-session-sequelize `
 
 ## 💻Usage
   
