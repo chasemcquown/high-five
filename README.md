@@ -25,9 +25,9 @@ Hello
     <img src="https://img.shields.io/badge/dotenv-green" />
 </p>
 
-# Description
+# 🔍Description
 
-Are you bored? Don't have plans tonight? We have the perfect app for you. This app will help you find a close-knit group of people that you can vent to about your problems or share your excitement about your team winning the championship. If you're new to town or just want to connect with new people join High 5! High 5! allows you to create blogs, interact with blogs, and follow current members that have similar interests as you. Sign up today!
+Are you bored? Don't have plans tonight? We have the perfect app for you. This app will help you find a close-knit group of people that you can vent to about your problems or share your excitement about your team winning the championship. If you're new to town or just want to connect with new people join High ✋. High ✋ allows you to create blogs, interact with blogs, and follow current members that have similar interests as you. Sign up today!
 
 ## Table of Contents
 
@@ -41,10 +41,29 @@ Are you bored? Don't have plans tonight? We have the perfect app for you. This a
 - [Links](#links)
 
 
+## 💾Installation
 
-## Installation
+To install this code, download the zip file, or use GitHub's guidelines to clone the repository. Also, you need to install [Node.js](https://nodejs.org/en/) and a text editor, I would recommend Visual Studio Code. . Once you have Node.js installed, then install Node Package Manager(npm) and a few dependencies such as Express, Handlebars and Sequelize. 
 
-Developers looking to practice with this app you must install [Node.js](https://nodejs.org/en/). Once you have Node.js installed, then install Node Package Manager(npm) and a few dependencies such as Express, Handlebars and Sequelize
+`npm init`
+
+`npm install mysql2  sequelize dotenv express`
+
+## 💻Usage
+  
+Run the following command at the root of your project:
+
+`mysql -u root -p`
+
+Enter Password when promted
+
+`source db/schema.sql`
+
+`quit`
+
+`npm run seed`
+  
+`npm start`
 
 ## Purpose
 
