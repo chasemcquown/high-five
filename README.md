@@ -47,7 +47,19 @@ To install this code, download the zip file, or use GitHub's guidelines to clone
 
 `npm init`
 
-`npm install mysql2  sequelize dotenv express`
+`npm install mysql2`
+
+`npm install sequelize`
+
+`npm install dotenv`
+
+`npm install express`
+
+`npm install handlebars`
+
+`npm install express-session`
+
+`npm install connect-session-sequelize`
 
 ## 💻Usage
   
