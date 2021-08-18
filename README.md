@@ -4,6 +4,30 @@
   <h1 align="center"> High 5! </h1>
 
 Hello
+<h1 align="center">Interactive Full-Stack Project: High ✋</h1>
+  
+<p align="center">
+    <img src="https://img.shields.io/github/repo-size/jpd61/e-commerce-backend" />
+    <img src="https://img.shields.io/github/languages/top/jpd61/e-commerce-backend"  />
+    <img src="https://img.shields.io/github/issues/jpd61/e-commerce-backend" />
+    <img src="https://img.shields.io/github/last-commit/jpd61/e-commerce-backend" >
+    <a href="https://github.com/jpd61"><img src="https://img.shields.io/github/followers/jpd61?style=social" target="_blank" /></a>
+    <a href="https://twitter.com/jpdewoody">
+        <img alt="Twitter: jpdewoody" src="https://img.shields.io/twitter/follow/jpdewoody.svg?style=social" target="_blank" />
+    </a>
+</p>
+  
+<p align="center">
+    <img src="https://img.shields.io/badge/Javascript-yellow" />
+    <img src="https://img.shields.io/badge/express-orange" />
+    <img src="https://img.shields.io/badge/Sequelize-blue"  />
+    <img src="https://img.shields.io/badge/mySQL-blue"  />
+    <img src="https://img.shields.io/badge/dotenv-green" />
+</p>
+
+# Description
+
+Are you bored? Don't have plans tonight? We have the perfect app for you. This app will help you find a close-knit group of people that you can vent to about your problems or share your excitement about your team winning the championship. If you're new to town or just want to connect with new people join High 5! High 5! allows you to create blogs, interact with blogs, and follow current members that have similar interests as you. Sign up today!
 
 ## Table of Contents
 
@@ -16,9 +40,7 @@ Hello
 - [Tests](#tests)
 - [Links](#links)
 
-## Description
 
-Are you bored? Don't have plans tonight? We have the perfect app for you. This app will help you find a close-knit group of people that you can vent to about your problems or share your excitement about your team winning the championship. If you're new to town or just want to connect with new people join High 5! High 5! allows you to create blogs, interact with blogs, and follow current members that have similar interests as you. Sign up today!
 
 ## Installation
 
@@ -39,7 +61,7 @@ This application is not covered by any license.
 - Chase McQuown
 - Denisse Rivera
 - Donald Bull
-- Fizza Zaidi
+- <h4>Designed and coded by <a href="https://github.com/fizzaaz">FIZZA ZAIDI</a></h4>
 - Maria Villarreal
 
 ## Issues
