@@ -1,8 +1,5 @@
 {{!-- {{> interest-buttons interests}} --}}
-<link
-	href='/public/stylesheets/user-profile.css'
-	rel='stylesheet'
-/>
+
 
 <section id='content' class='container'>
 	<!-- Begin .page-heading -->
@@ -20,7 +17,7 @@
 			</div>
 			<div class='media-body va-m'>
 				<h2 class='media-heading'>
-					{{faker "name.findName"}}
+					{{user.username}}
 					
 				</h2>
 				
@@ -43,12 +40,11 @@
 				</div>
 				<div class="col">
 					<div class='panel-body pb5'>
-					{{!-- {{> interest-buttons user.interests}} --}}
-<li>Interest: {{faker "lorem.words" 1}}</li>
-<li>Interest: {{faker "lorem.words" 1}}</li>
-<li>Interest: {{faker "lorem.words" 1}}</li>
-<li>Interest: {{faker "lorem.words" 1}}</li>
-<li>Interest: {{faker "lorem.words" 1}}</li>
+						
+<li>Interest: {{user.interest_id}}</li>
+<li>Interest: {{user.Interest_Category}}</li>
+<li>Interest: {{interest_id}}</li>
+<li>Interest: {{Interest_Category}}</li>
 				</div>
 				</div>
 			</div>
@@ -74,7 +70,7 @@
 					<hr class='short br-lighter' />
 
 					<h5>Who I am</h5>
-<h4>{{faker "hacker.adjective" }}</h4>
+					<p>{{faker "hacker.adjective" }}</p>
 					
 
 					<hr class='short br-lighter' />
@@ -93,20 +89,22 @@
 			<div class='tab-block'>
 				<ul class='nav nav-tabs'>
 					<li class='active'>
-						<a href='#tab1' data-toggle='tab'>My Feed</a>
+						<a href='/profile' data-toggle='tab'>Add Post</a>
 					</li>
 					<li>
-						<a href='#tab1' data-toggle='tab'>Favorites</a>
+						<a href='/dashboard' data-toggle='tab'>Comments</a>
 					</li>
 					<li>
-						<a href='/user' data-toggle='tab'>High 5!</a>
+						<a href="/user-feed" id='user-feed' data-toggle='tab'>user-feed</a>
 					</li>
 				</ul>
-				{{!-- {{> user-feed }} --}}
+				
 			</div>
 		</div>
 	</div>
 </section>
 
-<script src="/sign-up"></script>
-<script src="/public/javascript/user-feed.js"></script>
+<script src="/javascript/add-post.js"></script>
+<script src="/javascript/comment.js"></script>
+<script src="/javascript/user-feed.js"></script>
+{{!-- <script src="/javascript/profile.js"></script> --}}

@@ -12,7 +12,7 @@ const userdata = [
     password: "password123",
   },
   {
-    username: "jwilloughway1",
+    username: "jwilloughway12",
     email: "rmebes1@sogou.com",
     password: "password123",
   },
@@ -37,7 +37,7 @@ const userdata = [
     password: "password123",
   },
   {
-    username: "jmacarthur9",
+    username: "jmaddcarthur9",
     email: "bsteen9@epa.gov",
     password: "password123",
   },
