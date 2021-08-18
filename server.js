@@ -49,6 +49,9 @@ app.use(session(sess));
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
+//Adding landing page layout
+app.get('/', (req, res) => res.render('index', { layout: 'homepage' }));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
