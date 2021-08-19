@@ -1,5 +1,5 @@
 const Comment = require('./comment');
-const Follower=require('./Follow');
+const Follow=require('./Follow');
 const Interest=require('./interest');
 const Likes=require('./likes');
 const Post=require('./Post');
@@ -62,29 +62,36 @@ Interest.belongsToMany(User,{
 });
 
 //User can like many posts (one to many 
-User.hasMany(Follower, {
+User.hasMany(Follow, {
     foreignKey: 'user_id',
-    as: 'User ',
-    onDelete: "cascade"
-});
-
-/*creates an association between the follower and the user. 
-The foreign key is added on the follower.*/
-Follower.belongsTo(User, {
-    foreignKey: 'user_id',
-    onDelete: "cascade"
-});
-
-//User can like many posts (one to many 
-User.hasMany(Following, {
-    foreignKey: 'follow_id',
     as: 'Followed ',
     onDelete: "cascade"
 });
 
 /*creates an association between the follower and the user. 
 The foreign key is added on the follower.*/
-Follower.belongsTo(User, {
+Follow.belongsTo(User, {
+    foreignKey: 'user_id',
+    onDelete: "cascade"
+});
+
+//User can like many posts (one to many 
+User.hasMany(Follow, {
+    foreignKey: 'follower_id',
+    as: 'follower ',
+    onDelete: "cascade"
+});
+
+/*creates an association between the follower and the user. 
+The foreign key is added on the follower.*/
+Follow.belongsTo(User, {
+    foreignKey: 'follower_id',
+    onDelete: "cascade"
+});
+
+/*creates an association between the follower and the user. 
+The foreign key is added on the follower.*/
+Follow.belongsTo(User, {
     foreignKey: 'user_id',
     onDelete: "cascade"
 });
@@ -126,4 +133,4 @@ Comment.belongsTo(Post,
         onDelete: "cascade"
     })
 
-module.exports = { User, Post, Comment,Likes, Interest,UserInterest};
+module.exports = { User, Post, Comment,Likes, Interest,UserInterest,Follow};
