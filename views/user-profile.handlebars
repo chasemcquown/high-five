@@ -35,16 +35,18 @@
 						<i class='fa fa-trophy'></i>
 					</span> --}}
 					<h3>
-						<span class='panel-title'> My Interests</span>
+						<span class='panel-title'> <strong>My Interests</strong></span>
 					</h3>
 				</div>
 				<div class="col">
-						<div class='panel-body pb5'>
-							<li>Interest: {{interest}}</li>
-							<li>Interest: {{Interests}}</li>
-							<li>Interest: {{interest_id}}</li>
-							<li>Interest: {{Interest_Category}}</li>
-						</div>
+						<div class='interests panel-body pb5'>
+						
+								<li> {{faker 'commerce.product'}}</li>
+								<li> {{faker 'commerce.productName'}}</li>
+								<li> {{faker 'address.country'}}</li>
+								<li> {{faker 'commerce.product'}}</li>
+								<li> {{faker 'commerce.productName'}}</li>
+							</div>
 				</div>
 			</div>
 			<div class="row">
@@ -68,25 +70,33 @@
 								<label for="content">Content</label>
 								<input id="content" name="content" />
 							</div>
+							
 							<button type="submit" class="btn">Create</button>
 						</form>
 					</section>
 					
 					{{#if posts.length}}
-					<section>
-						<h2>Your High Five Posts</h2>
+					<section id="user-posts">
+						<div class="panel">
+							<div class="panel-heading">
+								<h3>Your High Five Posts</h3>
 						<ol>
 							{{#each posts as |post|}}
-							<li>
+							<div>
 								{{!-- {{> post-info post}} --}}
-								<h3>{{title}}</h3>
-								<h4>{{content}}</h4>
-					
-								<a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-								<a href="/profile/edit/{{id}}">{{comments.length}} see comment(s)</a>
-							</li>
+								<h4>
+									<span class='panel-title'>{{title}}</span>
+								</h4>
+								<p>{{content}}</p>
+								<div >
+									<a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+									<a href="/profile/edit/{{id}}" class="user-links">{{comments.length}}-   See comment(s)</a>
+								</div>
+							</div>
 							{{/each}}
 						</ol>
+							</div>
+						</div>
 					</section>
 					
 					{{/if}}

@@ -94,7 +94,19 @@ li {
 	color: white;
 	border-radius: 20px;
 	font-size: 14px;
-	width: 100%;
+	width: 90%;
+	padding: 0.25rem;
+	margin: 10px 0 0 10px;
+}
+#user-posts {
+	margin-top: 10rem;
+}
+
+.user-links {
+	color: #168aad;
+}
+.edit-link {
+	color: #691;
 }
 
 .strech {
