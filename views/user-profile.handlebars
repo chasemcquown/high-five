@@ -55,36 +55,48 @@
 						<i class='fa fa-pencil'></i>
 					</span> --}}
 					<br>
-					<h3>
-						<span class='panel-title'>About Me</span>
-					</h3>
-				</div>
-				<div class='panel-body pb5'>
-
-					<h6>What I do</h6>
-
-					<h4>{{faker "hacker.adjective" }}</h4>
-					<p class='text-muted'>
-						
-
-					<hr class='short br-lighter' />
-
-					<h5>Who I am</h5>
-					<p>{{faker "hacker.adjective" }}</p>
 					
-
-					<hr class='short br-lighter' />
-
-					<h5>Why me</h5>
-
-					<h4>{{faker "hacker.phrase" }}</h4>
-					<p class='lead'>{{faker "hacker.adjective"}}</p>
-
+					<section>
+						<h2>Create New Post</h2>
+					
+						<form class="new-post-form">
+							<div>
+								<label for="post-title">Title</label>
+								<input type="text" id="post-title" name="post-title" />
+							</div>
+							<div>
+								<label for="content">Content</label>
+								<input id="content" name="content" />
+							</div>
+							<button type="submit" class="btn">Create</button>
+						</form>
+					</section>
+					
+					{{#if posts.length}}
+					<section>
+						<h2>Your High Five Posts</h2>
+						<ol>
+							{{#each posts as |post|}}
+							<li>
+								{{!-- {{> post-info post}} --}}
+								<p>{{title}}</p>
+								<p>{{content}}</p>
+					
+								<a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+								<a href="/profile/edit/{{id}}">{{comments.length}} see comment(s)</a>
+							</li>
+							{{/each}}
+						</ol>
+					</section>
+					
+					{{/if}}
+					
+					
 				</div>
 			</div>
 			</div>
 		</div>
-		<div class='col-md-8'>
+		{{!-- <div class='col-md-8'>
 
 			<div class='tab-block'>
 				<ul class='nav nav-tabs'>
@@ -100,7 +112,7 @@
 				</ul>
 				
 			</div>
-		</div>
+		</div> --}}
 	</div>
 </section>
 
