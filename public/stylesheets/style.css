@@ -22,7 +22,14 @@ body {
 	border-bottom-left-radius: 0px !important;
 	border-bottom-right-radius: 0px !important;
 }
-
+#logout {
+	background: #4527a0;
+	color: white;
+	border-radius: 20px;
+	font-size: 14px;
+	width: 10%;
+	margin-left: 80rem;
+}
 .btn {
 	background: #4527a0;
 	color: white;

@@ -1,13 +1,33 @@
 body {
-    background: url(whitelogo.png) no-repeat center center fixed;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-    padding: 1.3rem 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	/* background: url(../assets/images/sign-up.png) no-repeat center center fixed; */
+	background-size: cover;
+	height: 100vh;
+	width: 100%;
+	padding: 1.3rem 3rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.search-wrap {
+	background: url('../assets/images/sign-up.png') no-repeat center center fixed;
+	background-size: cover;
+	height: 100vh;
+	width: 100%;
+	padding: 1.3rem 3.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.search-wrap h1 {
+	font-size: 3rem;
+	font-weight: 800;
+	color: #fff;
+	margin: 0 0 1.5rem;
+	text-align: center;
 }
 
 input,
@@ -42,20 +62,17 @@ button:focus {
 	outline-width: 0;
 }
 
-
 .card1 {
-    width: 50%;
-    position: center;
-    margin-top: 400px;
-    margin-left: 100px;
-    border: 1px solid white;
-    padding: 20px;
-    color: rgb(9, 10, 10);
-    background-color: rgb(54, 121, 165);
-    opacity: 0.8;
-   
+	width: 50%;
+	position: center;
+	margin-top: 400px;
+	margin-left: 100px;
+	border: 1px solid white;
+	padding: 20px;
+	color: rgb(9, 10, 10);
+	background-color: rgb(54, 121, 165);
+	opacity: 0.8;
 }
-
 
 #image {
 	width: 100%;
