@@ -98,11 +98,10 @@ This application is not covered by any license.
 - Maria Villarreal
 
 ## Acceptance Criteria
-
  ` When I open the app, the Application uses a Node and Express back end and uses both GET and POST routes for retrieving and     adding new data. `
  ` When I open the root folder, the Application has a folder structure that meets the MVC paradigm and uses Handlebars.js as the template engine.`
  ` When I see the backend, the Application is backed by a MySQL database with a Sequelize ORM and protects API keys and sensitive information with environment variables. `
- ` When I tries to interact with the app, the Application includes user authentication (express-session and cookies). `
+ `When I tries to interact with the app, the Application includes user authentication (express-session and cookies). ` 
  `When I see the backend code, the Application uses at least one new library, package, or technology not covered in class. `
 
 
