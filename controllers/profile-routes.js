@@ -53,11 +53,10 @@ router.get("/", (req, res) => {
       res.status(500).json(err);
     });
 });
-// when visiting a user profile page view all posts related
 router.get("/user/:id", (req, res) => {
   Post.findAll({
     // where: {
-    //   user_id: req.body.user_id,
+    //   user_id: req.params.user_id,
     // },
     attributes: [
       "id",
@@ -96,7 +95,6 @@ router.get("/user/:id", (req, res) => {
       res.status(500).json(err);
     });
 });
-
 // get a single user and route them to the user-profile page
 router.get("/user/:id", (req, res) => {
   User.findOne({

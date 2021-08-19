@@ -79,8 +79,8 @@
 							{{#each posts as |post|}}
 							<li>
 								{{!-- {{> post-info post}} --}}
-								<p>{{title}}</p>
-								<p>{{content}}</p>
+								<h3>{{title}}</h3>
+								<h4>{{content}}</h4>
 					
 								<a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
 								<a href="/profile/edit/{{id}}">{{comments.length}} see comment(s)</a>
@@ -90,7 +90,7 @@
 					</section>
 					
 					{{/if}}
-					
+
 					
 				</div>
 			</div>
