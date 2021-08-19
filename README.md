@@ -1,8 +1,3 @@
-[![NPM Version](https://img.shields.io/npm/v/npm.svg?style=flat)]()
-<br />
-
-  <h1 align="center"> High 5! </h1>
-
 <h1 align="center">Interactive Full-Stack Project: High ✋</h1>
   
 <p align="center">
@@ -73,40 +68,40 @@ Use Node.js and Express.js to create a RESTful API. Use Handlebars.js as the tem
 
 ## 💻Usage
   
-Run the following command at the root of your project:
+  Run the following command at the root of your project:
 
-`mysql -u root -p`
+  `mysql -u root -p`
 
-Enter Password when promted
+  Enter Password when promted
 
-`source db/schema.sql`
+  `source db/schema.sql`
 
-`quit`
+  `quit`
 
-`npm run seed`
-  
-`npm start`
+  `npm run seed`
+    
+  `npm start`
 
 
 ## ✋User Story
 
-`As a User I can write a blog about my favorite interests as well as interact with other blog posts. Change a boring Friday night-in watching the same series you've seen multiple times, and include High 5 into the night's events.`
+  `As a User I can write a blog about my favorite interests as well as interact with other blog posts. Change a boring Friday night-in watching the same series you've seen multiple times, and include High 5 into the night's events.`
 
 
 ## ✋Acceptance Criteria
 
- ` When I open the app, the Application uses a Node and Express back end and uses both GET and POST routes for retrieving and     adding new data. `
- ` When I open the root folder, the Application has a folder structure that meets the MVC paradigm and uses Handlebars.js as the template engine.`
- ` When I see the backend, the Application is backed by a MySQL database with a Sequelize ORM and protects API keys and sensitive information with environment variables. `
- `When I tries to interact with the app, the Application includes user authentication (express-session and cookies). ` 
- `When I see the backend code, the Application uses at least one new library, package, or technology not covered in class. `
+  ` When I open the app, the Application uses a Node and Express back end and uses both GET and POST routes for retrieving and     adding new data. `
+  ` When I open the root folder, the Application has a folder structure that meets the MVC paradigm and uses Handlebars.js as the template engine.`
+  ` When I see the backend, the Application is backed by a MySQL database with a Sequelize ORM and protects API keys and sensitive information with environment variables. `
+  `When I tries to interact with the app, the Application includes user authentication (express-session and cookies). ` 
+  `When I see the backend code, the Application uses at least one new library, package, or technology not covered in class. `
 
 
 ## ✏️License
 
-[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
-<br />
-This application is covered by ISC license.
+  [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+  <br />
+  This application is covered by ISC license.
 
 
 ## 👪Contributing
@@ -120,7 +115,7 @@ This application is covered by ISC license.
 
 ## 🔍Issues
 
-None at this time
+  None at this time
 
 
 ## ✏️Testing
@@ -137,12 +132,12 @@ This app did not undergo any formal testing
 - [This app is deployed on Heroku (click here to see app)](https://dashboard.heroku.com/apps)
 
 
-## Questions
+## ❓Questions
 
- If you have any queries feel free to contact us through our Github profile at  
- 👋[fizzaaz](https://github.com/fizzaaz/) <br>
- 👋[msvillarreal21](https://github.com/msvillarreal21/)<br>
- 👋[Bullbotbam](https://github.com/Bullbotbam/)<br>
- 👋[chasemcquown](https://github.com/chasemcquown/)<br>
- 👋[RiveraDenisse](https://github.com/RiveraDenisse/)
+  If you have any queries feel free to contact us through our Github profile at  
+  👋[fizzaaz](https://github.com/fizzaaz/) <br>
+  👋[msvillarreal21](https://github.com/msvillarreal21/)<br>
+  👋[Bullbotbam](https://github.com/Bullbotbam/)<br>
+  👋[chasemcquown](https://github.com/chasemcquown/)<br>
+  👋[RiveraDenisse](https://github.com/RiveraDenisse/)
 
