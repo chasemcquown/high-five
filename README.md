@@ -31,6 +31,11 @@ Hello
 Are you bored? Don't have plans tonight? We have the perfect app for you. This app will help you find a close-knit group of people that you can vent to about your problems or share your excitement about your team winning the championship. If you're new to town or just want to connect with new people join High ✋. High ✋ allows you to create blogs, interact with blogs, and follow current members that have similar interests as you. Sign up today!. 
 Use Node.js and Express.js to create a RESTful API. Use Handlebars.js as the templating engine.
 
+✋ [GitHub Repository](https://github.com/chasemcquown/high-five/)
+
+✋ [Deployed Application URL](https://techbloghero.herokuapp.com/)
+
+
 ## Table of Contents
 
 - [Installation](#installation)
@@ -41,6 +46,7 @@ Use Node.js and Express.js to create a RESTful API. Use Handlebars.js as the tem
 - [Issues](#issues)
 - [Tests](#tests)
 - [Links](#links)
+- [Questions](#questions)
 
 
 ## 💾Installation
@@ -122,3 +128,15 @@ This app did not undergo any formal testing
 - [The App ~ Video Demo](https://youtu.be/)
 
 - [This app is deployed on Heroku (click here to see app)](https://dashboard.heroku.com/apps)
+
+## Questions
+
+ If you have any queries feel free to contact us through our Github profile at  
+ 👋[fizzaaz](https://github.com/fizzaaz/)
+ 👋[msvillarreal21](https://github.com/msvillarreal21/)
+ 👋[Bullbotbam](https://github.com/Bullbotbam/)
+ 👋[chasemcquown](https://github.com/chasemcquown/)
+ 👋[RiveraDenisse](https://github.com/RiveraDenisse/)
+
+
+ .
