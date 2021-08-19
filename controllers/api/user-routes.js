@@ -2,12 +2,27 @@
 const router = require('express').Router();
 
 //const { like } = require("sequelize/types/lib/operators");
-const { User, Post, Comment, Likes, Interest } = require('../../models');
+const {
+	User,
+	Post,
+	Comment,
+	Likes,
+	Interest,
+	UserInterest,
+} = require('../../models');
 
 // get all users for main page cards
 router.get('/', (req, res) => {
 	User.findAll({
 		attributes: { exclude: ['password'] },
+
+		include: [
+			{
+				// include users interests (interest model)
+				model: Interest,
+				// attributes: ['Interest_Category'],
+			},
+		],
 	})
 		.then((userInfo) => res.json(userInfo))
 		.catch((err) => {
@@ -27,8 +42,9 @@ router.get('/:id', (req, res) => {
 			{
 				// include users interests (interest model)
 				model: Interest,
-				attributes: ['Interest_Category'],
+				// attributes: ['Interest_Category'],
 			},
+
 			//{
 			//     // include how many followers user has (followers model)
 			//     model: Follower,

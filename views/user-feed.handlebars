@@ -23,15 +23,28 @@
 								</strong></h2>
 							<br />
 							<p class='text-muted font-size-sm'> </p>
-
-							<div class='interests'>
+							<div class='Interests'>
+								{{!-- {{#each Interests}} --}}
+								<section class='interest'>
+									<div class='meta'>
+										{{username}}
+										{{!-- on
+											{{format_date created_at}} --}}
+									</div>
+									<div class='text'>
+										{{Interest_Category}}
+									</div>
+								</section>
+								{{!-- {{/each}} --}}
+							</div>
+							{{!-- <div class='interests'>
 								<h3><strong>Interests:</strong></h3>
 								<li> {{faker 'commerce.product'}}</li>
 								<li> {{faker 'commerce.productName'}}</li>
 								<li> {{faker 'address.country'}}</li>
 								<li> {{faker 'commerce.product'}}</li>
 								<li> {{faker 'commerce.productName'}}</li>
-							</div>
+							</div> --}}
 						</div>
 					</div>
 					<div class='card-footer'>
