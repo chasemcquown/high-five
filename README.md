@@ -100,7 +100,7 @@ Enter Password when promted
  `When I tries to interact with the app, the Application includes user authentication (express-session and cookies). ` 
  `When I see the backend code, the Application uses at least one new library, package, or technology not covered in class. `
 
-## License
+## ✏️License
 
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 <br />
@@ -114,17 +114,17 @@ This application is covered by ISC license.
 - <a href="https://github.com/Bullbotbam">Donald Bull</a> 
 - <a href="https://github.com/msvillarreal21">Maria Villarreal</a></h4>
 
-## Issues
+## 🔍Issues
 
 None at this time
 
-## Testing
+## ✏️Testing
 
 [![](https://i9.ytimg.com)](https://youtu.be/)
 
 This app did not undergo any formal testing
 
-## Links
+## 🔍Links
 
 - [The App ~ Video Demo](https://youtu.be/)
 
@@ -133,10 +133,10 @@ This app did not undergo any formal testing
 ## Questions
 
  If you have any queries feel free to contact us through our Github profile at  
- 👋[fizzaaz](https://github.com/fizzaaz/)
- 👋[msvillarreal21](https://github.com/msvillarreal21/)
- 👋[Bullbotbam](https://github.com/Bullbotbam/)
- 👋[chasemcquown](https://github.com/chasemcquown/)
+ 👋[fizzaaz](https://github.com/fizzaaz/) <br>
+ 👋[msvillarreal21](https://github.com/msvillarreal21/)<br>
+ 👋[Bullbotbam](https://github.com/Bullbotbam/)<br>
+ 👋[chasemcquown](https://github.com/chasemcquown/)<br>
  👋[RiveraDenisse](https://github.com/RiveraDenisse/)
 
 
