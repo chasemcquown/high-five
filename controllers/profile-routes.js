@@ -60,12 +60,12 @@ router.get('/user/:id', (req, res) => {
 		where: {
 			id: req.params.id,
 		},
-		include: [
-			{
-				model: UserInterest,
-				attributes: ['id', 'user_id', 'interest_id'],
-			},
-		],
+		// include: [
+		// 	{
+		// 		model: UserInterest,
+		// 		attributes: ['id', 'user_id', 'interest_id'],
+		// 	},
+		// ],
 		// include: [
 		// 	{
 		// 		model: Interest,

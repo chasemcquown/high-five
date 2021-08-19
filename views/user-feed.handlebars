@@ -1,7 +1,7 @@
 <section id='user' class='superbox-list constainer-fluid grid'>
-
+	{{#grouped_each 3 users}}
 	<div class='main-body user'>
-		{{#each users}}
+		{{#each this}}
 			<div
 				class='row row-cols-4 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 gutters-sm'
 			>
@@ -19,26 +19,29 @@
 									alt='User'
 									class='img-fluid img-thumbnail rounded-corners border-0 mb-3'
 								/></a>
-							<h5 class='card-title'>{{username}}</h5>
+							<h5 class='card-title'><strong>Username: </strong>{{username}}</h5>
 
 							{{!-- <p class='text-muted font-size-sm'>{{> interest_buttons}} </p> --}}
-							<div class='interests'>
+	<div class='interests'>
 								<div class='interests'>
-									{{> interests-buttons}}
-									{{!-- {{#each this}}
+									{{!-- {{> interests-buttons}} --}}
+							{{#each interest}}
 										<section class='interest'>
 
 											<div class='text'>
 												{{interest_id}}
 											</div>
 										</section>
-									{{/each}} --}}
+									{{/each}} 
 								</div>
-								{{!-- <li>Interest: {{faker 'lorem.words' 1}}</li>
-								<li>Interest: {{faker 'lorem.words' 1}}</li>
-								<li>Interest: {{faker 'lorem.words' 1}}</li>
-								<li>Interest: {{faker 'lorem.words' 1}}</li>
-								<li>Interest: {{faker 'lorem.words' 1}}</li> --}}
+								<div class="interests">
+									<h5><strong>Interests:</strong></h5>
+								<li> {{faker 'lorem.words' 2}}</li>
+								<li> {{faker 'lorem.words' 2}}</li>
+								<li> {{faker 'lorem.words' 1}}</li>
+								<li> {{faker 'lorem.words' 2}}</li>
+								<li> {{faker 'lorem.words' 2}}</li> 
+								</div>
 							</div>
 						</div>
 						<div class='card-footer'>
@@ -68,49 +71,12 @@
 				</div>
 			</div>
 		{{/each}}
-		{{!-- {{else}}
-			<p> No Users Available</p> --}}
+		{{else}}
+			<p> No Users Available</p>
 
 	</div>
-
+	{{/grouped_each}} 
+	
 </section>
-{{!-- 	
-	 <div class='container bootdey'>
-	{{#each this}}
-		<div class='row'>
-			<div class='col-md-4'>
-
-				<div class='well well-white mini-profile-widget'>
-					<div class='image-container'>
-						<a href='/'><img
-								{{! src='https://bootdey.com/img/Content/avatar/avatar1.png' }}
-								src='{{faker 'image.imageUrl'}}'
-								class='avatar img-responsive'
-								alt='avatar'
-							/>
-						</a>
-					</div>
-					<div class='details'>
-						<h4>{{user}}</h4>
-						<hr />
-						{{> interests user.interests_id}}
-						<div class='mg-top-10'>32 Followers | 120 Following | 18 Posts</div> 
-						<p class='mg-top-20'>
-							<a href='javascript:void(0);' class='btn btn-blue'>
-								<i class='fa fa-facebook fa-fw'></i>
-							</a>
-							<a href='javascript:void(0);' class='btn btn-info'>
-								<i class='fa fa-twitter fa-fw'></i>
-							</a>
-							<a href='javascript:void(0);' class='btn btn-red'>
-								<i class='fa fa-google-plus fa-fw'></i>
-							</a>
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	{{/each}}
-</div>  --}}
 
 <script src='/javascript/user-feed.js'></script>
