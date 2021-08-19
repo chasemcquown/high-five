@@ -16,7 +16,7 @@
 
 	<body>
 
-		<header>
+		{{! <header>
 			<nav
 				class='navbar sticky-top navbar-dark navbar-expand-md'
 				style='background-color: #168aad'
@@ -39,27 +39,39 @@
 					</div>
 				</div>
 			</nav>
+		</header> }}
 
-		</header>
-		<main class='container'>
-			{{{body}}}
-		</main>
 		{{! <h2>
 			<a href='/'>High5!</a>
 		</h2> }}
-		{{!-- <nav>
-					<p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">{{User}}</a></p>
-					{{#if loggedIn}}
-						<li>
-							<a href='/'>High5!</a>
-						</li>
-						{{! <button id='logout' class='btn-no-style'>logout</button> }}
-					{{else}}
-						<li>
-							{{! <a href='/'>Log In</a> }}
-						</li>
-					{{/if}}
-				</nav> --}}
+		<nav class='navbar sticky-top navbar-dark navbar-expand-md'>
+			<ul class='menu'>
+				<li class='logo col-6'><a class='navbar-brand' href='user-feed'>
+						<img
+							alt='High5! Brand Logo'
+							src='/assets/images/high5logo.png'
+							height='42'
+							width='42'
+						/>
+					</a></li>
+				{{#if loggedIn}}
+					<li class='item button btn-primary row-cols-md-3'>
+						<a href='profile'>Profile Page</a>
+					</li>
+					<li class='item button btn-primary row-cols-md-3'>
+						<a href='/'>Log Out</a>
+					</li>
+				{{else}}
+					<li>
+						{{! <a href='/'>Log In</a> }}
+					</li>
+				{{/if}}
+			</ul>
+		</nav>
+
+		<main class='container'>
+			{{{body}}}
+		</main>
 		{{! <div class='container'>
 
 		</div> }}
