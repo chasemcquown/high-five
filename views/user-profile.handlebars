@@ -1,8 +1,5 @@
 {{!-- {{> interest-buttons interests}} --}}
-<link
-	href='/public/stylesheets/user-profile.css'
-	rel='stylesheet'
-/>
+
 
 <section id='content' class='container'>
 	<!-- Begin .page-heading -->
@@ -20,7 +17,7 @@
 			</div>
 			<div class='media-body va-m'>
 				<h2 class='media-heading'>
-					{{faker "name.findName"}}
+					{{user.username}}
 					
 				</h2>
 				
@@ -29,7 +26,7 @@
 		</div>
 	</div>
 
-	<div class='row'>
+	<div class='user-panel-row'>
 		<div class='col-md-4'>
 
 			<div class='panel'>
@@ -38,75 +35,98 @@
 						<i class='fa fa-trophy'></i>
 					</span> --}}
 					<h3>
-						<span class='panel-title'> My Interests</span>
+						<span class='panel-title'> <strong>My Interests</strong></span>
 					</h3>
 				</div>
 				<div class="col">
-					<div class='panel-body pb5'>
-					{{!-- {{> interest-buttons user.interests}} --}}
-<li>Interest: {{faker "lorem.words" 1}}</li>
-<li>Interest: {{faker "lorem.words" 1}}</li>
-<li>Interest: {{faker "lorem.words" 1}}</li>
-<li>Interest: {{faker "lorem.words" 1}}</li>
-<li>Interest: {{faker "lorem.words" 1}}</li>
-				</div>
+						<div class='interests panel-body pb5'>
+						
+								<li> {{faker 'commerce.product'}}</li>
+								<li> {{faker 'commerce.productName'}}</li>
+								<li> {{faker 'address.country'}}</li>
+								<li> {{faker 'commerce.product'}}</li>
+								<li> {{faker 'commerce.productName'}}</li>
+							</div>
 				</div>
 			</div>
-			<div class="row">
+			<div class="col-md-4">
 				<div class='panel'>
-				<div class='panel-heading'>
-					{{!-- <span class='panel-icon'>
-						<i class='fa fa-pencil'></i>
-					</span> --}}
-					<br>
-					<h3>
-						<span class='panel-title'>About Me</span>
-					</h3>
-				</div>
-				<div class='panel-body pb5'>
-
-					<h6>What I do</h6>
-
-					<h4>{{faker "hacker.adjective" }}</h4>
-					<p class='text-muted'>
-						
-
-					<hr class='short br-lighter' />
-
-					<h5>Who I am</h5>
-<h4>{{faker "hacker.adjective" }}</h4>
+					<section>
+							<div class='panel-heading'>
+							{{!-- <span class='panel-icon'>
+								<i class='fa fa-pencil'></i>
+							</span> --}}
+					{{!-- <br> --}}
+							<h3>
+								<span class='panel-title'> Create New Post</span>
+							</h3>
 					
+						<form class="new-post-form">
+							<div>
+								<label for="post-title">Title</label>
+								<input type="text" id="post-title" name="post-title" />
+							</div>
+							<div>
+								<label for="content">Content</label>
+								<input id="content" name="content" />
+							</div>
+							
+							<button type="submit" class="btn">Create</button>
+						</form>
+					</section>
+					
+					{{#if posts.length}}
+					<section id="user-posts">
+						<div class="panel">
+							<div class="panel-heading">
+								<h3>Your High5! Posts</h3>
+						<ol>
+							{{#each posts as |post|}}
+							<div>
+								{{!-- {{> post-info post}} --}}
+								<h4>
+									<span class='panel-title'>{{title}}</span>
+								</h4>
+								<p>{{content}}</p>
+								<div >
+									<a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+									<a href="/profile/edit/{{id}}" class="user-links">{{comments.length}}-   See comment(s)</a>
+								</div>
+							</div>
+							{{/each}}
+						</ol>
+							</div>
+						</div>
+					</section>
+					
+					{{/if}}
 
-					<hr class='short br-lighter' />
-
-					<h5>Why me</h5>
-
-					<h4>{{faker "hacker.phrase" }}</h4>
-					<p class='lead'>{{faker "hacker.adjective"}}</p>
-
+					
 				</div>
 			</div>
 			</div>
 		</div>
-		<div class='col-md-8'>
+		{{!-- <div class='col-md-8'>
 
 			<div class='tab-block'>
 				<ul class='nav nav-tabs'>
 					<li class='active'>
-						<a href='#tab1' data-toggle='tab'>My Feed</a>
+						<a href='/profile' data-toggle='tab'>Add Post</a>
 					</li>
 					<li>
-						<a href='#tab1' data-toggle='tab'>Favorites</a>
+						<a href='/dashboard' data-toggle='tab'>Comments</a>
 					</li>
 					<li>
-						<a href='/user' data-toggle='tab'>High 5!</a>
+						<a href="/user-feed" id='user-feed' data-toggle='tab'>user-feed</a>
 					</li>
 				</ul>
-				{{!-- {{> user-feed }} --}}
+				
 			</div>
-		</div>
+		</div> --}}
 	</div>
 </section>
 
-<script src="/sign-up"></script>
-<script src="/public/javascript/user-feed.js"></script>
+<script src="/javascript/add-post.js"></script>
+<script src="/javascript/comment.js"></script>
+<script src="/javascript/user-feed.js"></script>
+{{!-- <script src="/javascript/profile.js"></script> --}}

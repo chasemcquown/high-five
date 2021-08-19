@@ -1,61 +1,98 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-</head>
-<body>
-	
-</body>
-</html>
-	<head>
-		<meta charset='UTF-8' />
-		<meta http-equiv='X-UA-Compatible' content='IE=edge' />
-		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
-		<title>Document</title>
-	</head>
-	<body>
-
-	</body>
-</html><html lang='en'>
+<html lang='en'>
 
 	<head>
 		<meta charset='UTF-8' />
 		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 		<title>High 5!</title>
-		{{!-- {{#each stylesheets}} --}}
-		<link rel='stylesheet' href='/public/stylesheets/user-profile.css' />
-		{{!-- {{/each}} --}}
+
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+		{{! <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous"> }}
+
 	</head>
 
 	<body>
-		<div class='wrapper'>
-			<header>
-				<h1>
-					<a href='/'>High5!</a>
-				</h1>
-				<nav>
-					{{#if loggedIn}}
-						<a href='/dashboard'>dashboard</a>
-						<button id='logout' class='btn-no-style'>logout</button>
-					{{else}}
-						<a href='/login'>login</a>
-					{{/if}}
-				</nav>
-			</header>
-			<main>
-				{{{body}}}
-			</main>
-			<footer>
-				Thanks for visiting!
-			</footer>
-		</div>
 
+		{{! <header>
+			<nav
+				class='navbar sticky-top navbar-dark navbar-expand-md'
+				style='background-color: #168aad'
+			>
+				<div class='container-fluid'>
+					<div class='navbar-header'>
+						<a class='navbar-brand' href='#'>
+							<img
+								alt='High5! Brand Logo'
+								src='/assets/images/high5logo.png'
+								height='42'
+								width='42'
+							/>
+						</a>
+						<div>
+							<a href="/user-feed" id='user-feed' data-toggle='tab'><button  id='feed' class='btn btn-outline-success my-2 my-sm-0' >user-feed</button></a>
+							<button
+								id='logout'
+								class='btn btn-outline-success my-2 my-sm-0'
+								type='submit'
+							>Logout</button>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header> }}
+
+		{{! <h2>
+			<a href='/'>High5!</a>
+		</h2> }}
+		<nav class='navbar sticky-top navbar-dark navbar-expand-md'>
+			<ul class='menu'>
+				<li class='logo col-6'><a class='navbar-brand' href='user-feed'>
+						<img
+							alt='High5! Brand Logo'
+							src='/assets/images/high5logo.png'
+							height='42'
+							width='42'
+						/>
+					</a></li>
+				{{#if loggedIn}}
+					<li class='item button btn-primary row-cols-md-3'>
+						<a href='profile'>Profile Page</a>
+					</li>
+					<li class='item button btn-primary row-cols-md-3'>
+						<a href='/'>Log Out</a>
+					</li>
+				{{else}}
+					<li>
+						{{! <a href='/'>Log In</a> }}
+					</li>
+				{{/if}}
+			</ul>
+		</nav>
+
+		<main class='container'>
+			{{{body}}}
+		</main>
+		{{! <div class='container'>
+
+		</div> }}
+
+		{{! <footer>
+				Thanks for visiting!
+			</footer> }}
+		<!-- Latest compiled and minified JavaScript -->
+		<script
+			src='https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'
+			integrity='sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd'
+			crossorigin='anonymous'
+		></script>
 		{{#if loggedIn}}
 			<script src='/javascript/logout.js'></script>
 		{{/if}}
 	</body>
 
 </html>
+
+<div class='inner'></div>
