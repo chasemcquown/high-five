@@ -33,7 +33,7 @@ Use Node.js and Express.js to create a RESTful API. Use Handlebars.js as the tem
 
 ✋ [GitHub Repository](https://github.com/chasemcquown/high-five/)
 
-✋ [Deployed Application URL](https://techbloghero.herokuapp.com/)
+✋ [Deployed Application URL](#)
 
 
 ## Table of Contents
@@ -41,6 +41,7 @@ Use Node.js and Express.js to create a RESTful API. Use Handlebars.js as the tem
 - [Installation](#installation)
 - [Usage](#usage)
 - [Purpose](#purpose)
+- [Acceptance Criteria](#acceptance-criteria)
 - [License](#license)
 - [Contributing](#contributing)
 - [Issues](#issues)
@@ -85,25 +86,25 @@ Enter Password when promted
   
 `npm start`
 
-## Purpose
 
-This app will allow you to blog about your favorite interests as well as interact with other blog posts. Change a boring Friday night-in watching the same series you've seen multiple times, and include High 5 into the night's events.
+## ✋User Story
 
-## License
-
-[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
-<br />
-This application is covered by ISC license.
+`As a User I can write a blog about my favorite interests as well as interact with other blog posts. Change a boring Friday night-in watching the same series you've seen multiple times, and include High 5 into the night's events.`
 
 
+## ✋Acceptance Criteria
 
-## Acceptance Criteria
  ` When I open the app, the Application uses a Node and Express back end and uses both GET and POST routes for retrieving and     adding new data. `
  ` When I open the root folder, the Application has a folder structure that meets the MVC paradigm and uses Handlebars.js as the template engine.`
  ` When I see the backend, the Application is backed by a MySQL database with a Sequelize ORM and protects API keys and sensitive information with environment variables. `
  `When I tries to interact with the app, the Application includes user authentication (express-session and cookies). ` 
  `When I see the backend code, the Application uses at least one new library, package, or technology not covered in class. `
 
+## License
+
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+<br />
+This application is covered by ISC license.
 
 ## 👪Contributing
 
