@@ -25,10 +25,11 @@ Hello
     <img src="https://img.shields.io/badge/dotenv-green" />
 </p>
 
-🔍 <h4>Designed and coded by <a href="https://github.com/fizzaaz">FIZZA ZAIDI</a></h4>
+ <h4>🔍 Designed and coded by <a href="https://github.com/fizzaaz">FIZZA ZAIDI</a> | <a href="https://github.com/fizzaaz">Chase McQuown</a> | <a href="https://github.com/fizzaaz">Denisse Rivera</a> | <a href="https://github.com/fizzaaz">Donald Bull</a> | <a href="https://github.com/fizzaaz">Maria Villarreal</a></h4>
 
 
-Are you bored? Don't have plans tonight? We have the perfect app for you. This app will help you find a close-knit group of people that you can vent to about your problems or share your excitement about your team winning the championship. If you're new to town or just want to connect with new people join High ✋. High ✋ allows you to create blogs, interact with blogs, and follow current members that have similar interests as you. Sign up today!
+Are you bored? Don't have plans tonight? We have the perfect app for you. This app will help you find a close-knit group of people that you can vent to about your problems or share your excitement about your team winning the championship. If you're new to town or just want to connect with new people join High ✋. High ✋ allows you to create blogs, interact with blogs, and follow current members that have similar interests as you. Sign up today!. 
+Use Node.js and Express.js to create a RESTful API. Use Handlebars.js as the templating engine.
 
 ## Table of Contents
 
@@ -95,6 +96,16 @@ This application is not covered by any license.
 - Donald Bull
 - <h4>Designed and coded by <a href="https://github.com/fizzaaz">FIZZA ZAIDI</a></h4>
 - Maria Villarreal
+
+## Acceptance Criteria
+
+ ` When I open the app, the Application uses a Node and Express back end and uses both GET and POST routes for retrieving and     adding new data. `
+ ` When I open the root folder, the Application has a folder structure that meets the MVC paradigm and uses Handlebars.js as the template engine.`
+ ` When I see the backend, the Application is backed by a MySQL database with a Sequelize ORM and protects API keys and sensitive information with environment variables. `
+ ` When I tries to interact with the app, the Application includes user authentication (express-session and cookies). `
+ `When I see the backend code, the Application uses at least one new library, package, or technology not covered in class. `
+
+
 
 ## Issues
 
