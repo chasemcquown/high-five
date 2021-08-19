@@ -7,6 +7,7 @@ const seedUserInterest=require("./userInterest-seeds")
 const seedUserLikes=require("./likes-seeds")
 
 const sequelize = require("../config/connection");
+const seedFollow = require("./follow-seeds");
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
@@ -14,6 +15,7 @@ const seedAll = async () => {
 
   await seedUsers();
   console.log("--------------");
+  
   await seedPosts();
   console.log("--------------");
   await seedComments();
@@ -24,6 +26,7 @@ await seedUserInterest();
 console.log("--------------");
 await seedUserLikes();
 console.log("--------------");
+await seedFollow();
 
   process.exit(0);
 };

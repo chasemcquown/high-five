@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-class Followers extends Model {}
-Followers.init({
+class Follow extends Model {}
+Follow.init({
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -27,6 +27,6 @@ Followers.init({
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'Followers'
+    modelName: 'Follow'
 });
-module.exports = Followers;
+module.exports = Follow;
