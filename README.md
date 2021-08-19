@@ -3,7 +3,6 @@
 
   <h1 align="center"> High 5! </h1>
 
-Hello
 <h1 align="center">Interactive Full-Stack Project: High ✋</h1>
   
 <p align="center">
@@ -50,25 +49,27 @@ Use Node.js and Express.js to create a RESTful API. Use Handlebars.js as the tem
 - [Questions](#questions)
 
 
+
 ## 💾Installation
 
-To install this code, download the zip file, or use GitHub's guidelines to clone the repository. Also, you need to install [Node.js](https://nodejs.org/en/) and a text editor, I would recommend Visual Studio Code. . Once you have Node.js installed, then install Node Package Manager(npm) and a few dependencies such as Express, Handlebars and Sequelize. 
+  To install this code, download the zip file, or use GitHub's guidelines to clone the repository. Also, you need to install [Node.js](https://nodejs.org/en/) and a text editor, I would recommend Visual Studio Code. . Once you have Node.js installed, then install Node Package Manager(npm) and a few dependencies such as Express, Handlebars and Sequelize. 
 
-`npm init`
+  `npm init`
 
-`npm install mysql2`
+  `npm install mysql2`
 
-`npm install sequelize`
+  `npm install sequelize`
 
-`npm install dotenv`
+  `npm install dotenv`
 
-`npm install express`
+  `npm install express`
 
-`npm install handlebars`
+  `npm install handlebars`
 
-`npm install express-session`
+  `npm install express-session`
 
-`npm install connect-session-sequelize `
+  `npm install connect-session-sequelize `
+
 
 ## 💻Usage
   
@@ -100,11 +101,13 @@ Enter Password when promted
  `When I tries to interact with the app, the Application includes user authentication (express-session and cookies). ` 
  `When I see the backend code, the Application uses at least one new library, package, or technology not covered in class. `
 
+
 ## ✏️License
 
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 <br />
 This application is covered by ISC license.
+
 
 ## 👪Contributing
 
@@ -114,21 +117,25 @@ This application is covered by ISC license.
 - <a href="https://github.com/Bullbotbam">Donald Bull</a> 
 - <a href="https://github.com/msvillarreal21">Maria Villarreal</a></h4>
 
+
 ## 🔍Issues
 
 None at this time
 
+
 ## ✏️Testing
 
-[![](https://i9.ytimg.com)](https://youtu.be/)
+  [![](https://i9.ytimg.com)](https://youtu.be/)
 
 This app did not undergo any formal testing
+
 
 ## 🔍Links
 
 - [The App ~ Video Demo](https://youtu.be/)
 
 - [This app is deployed on Heroku (click here to see app)](https://dashboard.heroku.com/apps)
+
 
 ## Questions
 
@@ -139,5 +146,3 @@ This app did not undergo any formal testing
  👋[chasemcquown](https://github.com/chasemcquown/)<br>
  👋[RiveraDenisse](https://github.com/RiveraDenisse/)
 
-
- .
