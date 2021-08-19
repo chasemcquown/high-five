@@ -99,7 +99,7 @@ This application is covered by ISC license.
  `When I see the backend code, the Application uses at least one new library, package, or technology not covered in class. `
 
 
-## Contributing
+## 👪Contributing
 
 - <a href="https://github.com/fizzaaz">FIZZA ZAIDI</a> 
 - <a href="https://github.com/chasemcquown">Chase McQuown</a>
