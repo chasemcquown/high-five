@@ -33,8 +33,8 @@ Use Node.js and Express.js to create a RESTful API. Use Handlebars.js as the tem
 
 ## Table of Contents
 
-- [Description](#description)
 - [Installation](#installation)
+- [Usage](#usage)
 - [Purpose](#purpose)
 - [License](#license)
 - [Contributing](#contributing)
@@ -85,17 +85,11 @@ This app will allow you to blog about your favorite interests as well as interac
 
 ## License
 
-![Not Licensed](https://img.shields.io/badge/license--tertiary)
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 <br />
-This application is not covered by any license.
+This application is covered by ISC license.
 
-## Contributing
 
-- Chase McQuown
-- Denisse Rivera
-- Donald Bull
-- <h4>Designed and coded by <a href="https://github.com/fizzaaz">FIZZA ZAIDI</a></h4>
-- Maria Villarreal
 
 ## Acceptance Criteria
  ` When I open the app, the Application uses a Node and Express back end and uses both GET and POST routes for retrieving and     adding new data. `
@@ -103,6 +97,15 @@ This application is not covered by any license.
  ` When I see the backend, the Application is backed by a MySQL database with a Sequelize ORM and protects API keys and sensitive information with environment variables. `
  `When I tries to interact with the app, the Application includes user authentication (express-session and cookies). ` 
  `When I see the backend code, the Application uses at least one new library, package, or technology not covered in class. `
+
+
+## Contributing
+
+- <a href="https://github.com/fizzaaz">FIZZA ZAIDI</a> 
+- <a href="https://github.com/chasemcquown">Chase McQuown</a>
+- <a href="https://github.com/RiveraDenisse">Denisse Rivera</a> 
+- <a href="https://github.com/Bullbotbam">Donald Bull</a> 
+- <a href="https://github.com/msvillarreal21">Maria Villarreal</a></h4>
 
 ## Issues
 
