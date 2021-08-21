@@ -29,20 +29,20 @@ router.get("/", (req, res) => {
       //   "like_count",
       // ],
     ],
-    // include: [
-    //   {
-    //     model: Comment,
-    //     attributes: ["id", "text", "user_id", "post_id", "created_at"],
-    //     include: {
-    //       model: User,
-    //       attributes: ["username"],
-    //     },
-    //   },
-    //   {
-    //     model: User,
-    //     attributes: ["username"],
-    //   },
-    // ],
+    include: [
+      {
+        model: Comment,
+        attributes: ["id", "comment_text", "user_id", "post_id", "created_at"],
+        include: {
+          model: User,
+          attributes: ["username"],
+        },
+      },
+      {
+        model: User,
+        attributes: ["username"],
+      },
+    ],
   })
     .then((postInfo) => {
       const posts = postInfo.map((post) => post.get({ plain: true }));
@@ -71,20 +71,20 @@ router.get("/user/:id", (req, res) => {
       //   "like_count",
       // ],
     ],
-    // include: [
-    //   {
-    //     model: Comment,
-    //     attributes: ["id", "text", "user_id", "post_id", "created_at"],
-    //     include: {
-    //       model: User,
-    //       attributes: ["username"],
-    //     },
-    //   },
-    //   {
-    //     model: User,
-    //     attributes: ["username"],
-    //   },
-    // ],
+    include: [
+      {
+        model: Comment,
+        attributes: ["id", "comment_text", "user_id", "post_id", "created_at"],
+        include: {
+          model: User,
+          attributes: ["username"],
+        },
+      },
+      {
+        model: User,
+        attributes: ["username"],
+      },
+    ],
   })
     .then((postInfo) => {
       const posts = postInfo.map((post) => post.get({ plain: true }));
@@ -138,14 +138,16 @@ router.get("/edit/:id", (req, res) => {
   Post.findByPk(req.params.id, {
     attributes: [
       "id",
-      "title",
       "content",
-      "user_id"[
-        (sequelize.literal(
-          "(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)"
-        ),
-        "vote_count")
-      ],
+      "title",
+
+      // "user_id",
+      // [
+      //   (sequelize.literal(
+      //     "(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)"
+      //   ),
+      //   "vote_count")
+      // ],
     ],
     include: [
       {

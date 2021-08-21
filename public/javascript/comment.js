@@ -25,15 +25,9 @@ async function commentFormHandler(event) {
     });
 
     if (response.ok) {
-      console(
-        "===================================================IT WOOOOOOOOOOOOORKSSSS==================================="
-      );
       console.log(comment_text, post_id);
       document.location.reload();
     } else {
-      console.log(
-        "==============================NOT WORKING==================================="
-      );
       alert(response.statusText);
     }
   }

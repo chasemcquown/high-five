@@ -33,8 +33,23 @@
         <button id="submitComment" type="submit">add comment</button>
     </div>
 </form>
-<div>
-{{> comments post.comments}}
+
+{{!-- <div class="comments">
+    {{#each this}}
+    <section class="comment">
+        <div class="meta">
+            {{user.username}} 
+        </div>
+        <div class="text">
+            {{comment_text}}
+        </div>
+    </section>
+  
+    {{/each}}
+</div> --}}
+
+{{> comments post.Comments}}
+
 
 <script src="/javascript/edit-post.js"></script>
 {{!--

@@ -65,11 +65,11 @@ router.get("/edit/:id", (req, res) => {
     include: [
       {
         model: Comment,
-        attributes: ["id", "comment_text", "user_id", "post_id", "created_at"],
-        include: {
-          model: User,
-          attributes: ["username"],
-        },
+        // attributes: ["id", "comment_text", "user_id", "post_id", "created_at"],
+        // include: {
+        //   model: User,
+        //   attributes: ["username"],
+        // },
       },
       {
         model: User,
@@ -80,7 +80,7 @@ router.get("/edit/:id", (req, res) => {
     .then((dbPostData) => {
       if (dbPostData) {
         const post = dbPostData.get({ plain: true });
-
+        console.log(dbPostData);
         res.render("edit-post", {
           post,
           loggedIn: true,
