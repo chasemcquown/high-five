@@ -5,9 +5,7 @@ const {
   User,
   Post,
   Comment,
-  Like,
-  UserInterest,
-  Interest,
+  Like
 } = require("../models");
 
 // get all user's posts, an inlcude comments and likes for each post
@@ -175,27 +173,6 @@ router.get("/edit/:id", (req, res) => {
       }
     })
     .catch((err) => {
-      res.status(500).json(err);
-    });
-});
-
-// get all of user's interests
-router.get("/", (req, res) => {
-  userInterest
-    .findAll({
-      where: {
-        user_id: req.params.user_id,
-      },
-      attributes: ["id", "user_id", "interest_id"],
-    })
-    .then((interestData) => {
-      const interests = interestData.map((interest) =>
-        interest.get({ plain: true })
-      );
-      res.render("user-profile", { interests, loggedIn: true });
-    })
-    .catch((err) => {
-      console.log(err);
       res.status(500).json(err);
     });
 });

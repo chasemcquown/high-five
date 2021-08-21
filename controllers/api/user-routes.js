@@ -6,23 +6,13 @@ const {
 	User,
 	Post,
 	Comment,
-	Likes,
-	Interest,
-	UserInterest,
+	Likes
 } = require('../../models');
 
 // get all users for main page cards
 router.get('/', (req, res) => {
 	User.findAll({
 		attributes: { exclude: ['password'] },
-
-		include: [
-			{
-				// include users interests (interest model)
-				model: Interest,
-				// attributes: ['Interest_Category'],
-			},
-		],
 	})
 		.then((userInfo) => res.json(userInfo))
 		.catch((err) => {
@@ -38,34 +28,23 @@ router.get('/:id', (req, res) => {
 		where: {
 			id: req.params.id,
 		},
-		include: [
-			{
-				// include users interests (interest model)
-				model: Interest,
-				// attributes: ['Interest_Category'],
-			},
-
-			//{
-			//     // include how many followers user has (followers model)
-			//     model: Follower,
-			//     attributes: ['follower_id']
-			// },
-			{
-				// include user's post
-				model: Post,
-				attributes: ['id', 'title', 'content'],
-			},
-			{
-				// include user's post comments
-				model: Comment,
-				attributes: ['id', 'comment_text', 'post_id'],
-			},
-			{
-				// include user's post likes
-				model: Likes,
-				attributes: ['id', 'post_id'],
-			},
-		],
+		// include: [
+		// 	{
+		// 		// include user's post
+		// 		model: Post,
+		// 		attributes: ['id', 'title', 'content'],
+		// 	},
+		// 	{
+		// 		// include user's post comments
+		// 		model: Comment,
+		// 		attributes: ['id', 'comment_text', 'post_id'],
+		// 	},
+		// 	{
+		// 		// include user's post likes
+		// 		model: Likes,
+		// 		attributes: ['id', 'post_id'],
+		// 	},
+		// ],
 	})
 		.then((userInfo) => {
 			if (!userInfo) {
@@ -86,16 +65,21 @@ router.post('/', (req, res) => {
 		username: req.body.username,
 		email: req.body.email,
 		password: req.body.password,
+		interestOne: req.body.interestOne,
+		interestTwo: req.body.interestTwo,
+		interestThree: req.body.interestThree,
+		interestFour: req.body.interestFour,
+		interestFive: req.body.interestFive
 	})
 		.then((dbUserData) => {
-			// req.session.save(() => {
-			//   req.session.user_id = dbUserData.id;
-			//   req.session.username = dbUserData.username;
-			//   req.session.loggedIn = true;
+			req.session.save(() => {
+			  req.session.user_id = dbUserData.id;
+			  req.session.username = dbUserData.username;
+			  req.session.loggedIn = true;
 
-			//   res.json(dbUserData);
-			// });
-			res.json(dbUserData);
+			  res.json(dbUserData);
+			});
+			
 		})
 		.catch((err) => {
 			console.log(err);

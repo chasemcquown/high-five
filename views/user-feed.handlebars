@@ -31,20 +31,20 @@
 										{{!-- on
 											{{format_date created_at}} --}}
 									</div>
-									<div class='text'>
+									{{!-- <div class='text'>
 										{{Interest_Category}}
-									</div>
+									</div> --}}
 								</section>
 								{{!-- {{/each}} --}}
 							</div>
-							{{!-- <div class='interests'>
+							<div class='interests'>
 								<h3><strong>Interests:</strong></h3>
-								<li> {{faker 'commerce.product'}}</li>
-								<li> {{faker 'commerce.productName'}}</li>
-								<li> {{faker 'address.country'}}</li>
-								<li> {{faker 'commerce.product'}}</li>
-								<li> {{faker 'commerce.productName'}}</li>
-							</div> --}}
+								<li> {{interest1}}</li>
+								<li> {{interest2}}</li>
+								<li> {{interest3}}</li>
+								<li> {{interest4}}</li>
+								<li> {{interest5}}</li>
+							</div>
 						</div>
 					</div>
 					<div class='card-footer'>
@@ -75,7 +75,7 @@
 		{{/each}}
 
 	</div>
-	<div class='main-feed user'>
+	{{!-- <div class='main-feed user'>
 		{{#each users}}
 			<div
 				class='row row-cols-4 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 gutters-sm'
@@ -137,7 +137,7 @@
 			</div>
 		{{/each}}
 
-	</div>
+	</div> --}}
 
 </section>
 
