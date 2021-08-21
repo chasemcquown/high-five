@@ -7,6 +7,7 @@
 		<div class='media clearfix'>
 			<div class='media-left pr30'>
 				<a href='#'>
+<<<<<<< HEAD
 					<img
 						class='media-object mw150'
 						src='https://bootdey.com/img/Content/avatar/avatar7.png'
@@ -15,52 +16,80 @@
 				</a>
 			</div>
 		{{#each users}}	
+=======
+					<img class='media-object mw150' src='https://bootdey.com/img/Content/avatar/avatar7.png'
+						alt='...' />
+				</a>
+			</div>
+			{{#each users}}
+>>>>>>> features/comments-posts
 			<div class='media-body va-m'>
 				<h2 class='media-heading'>
 					{{user.username}}
 				</h2>
 			</div>
+<<<<<<< HEAD
 		{{/each}}	
+=======
+			{{/each}}
+>>>>>>> features/comments-posts
 		</div>
 	</div>
 
 	<div class="profile-container">
 		<div class='user-panel-row'>
+<<<<<<< HEAD
 		<div class='col-md-4'>
+=======
+			<div class='col-md-4'>
+>>>>>>> features/comments-posts
 
-			<div class='panel'>
-				<div class='panel-heading'>
-					{{!-- <span class='panel-icon'>
-						<i class='fa fa-trophy'></i>
-					</span> --}}
-					<h3>
-						<span class='panel-title'> <strong>My Interests</strong></span>
-					</h3>
-				</div>
-				<div class="col">
+				<div class='panel'>
+					<div class='panel-heading'>
+						{{!-- <span class='panel-icon'>
+							<i class='fa fa-trophy'></i>
+						</span> --}}
+						<h3>
+							<span class='panel-title'> <strong>My Interests</strong></span>
+						</h3>
+					</div>
+					<div class="col">
 						<div class='interests panel-body pb5'>
-						
-								<li> {{faker 'commerce.product'}}</li>
-								<li> {{faker 'commerce.productName'}}</li>
-								<li> {{faker 'address.country'}}</li>
-								<li> {{faker 'commerce.product'}}</li>
-								<li> {{faker 'commerce.productName'}}</li>
-							</div>
+
+							<li> {{faker 'commerce.product'}}</li>
+							<li> {{faker 'commerce.productName'}}</li>
+							<li> {{faker 'address.country'}}</li>
+							<li> {{faker 'commerce.product'}}</li>
+							<li> {{faker 'commerce.productName'}}</li>
+						</div>
+					</div>
 				</div>
+				{{!--
 			</div>
+<<<<<<< HEAD
 		{{!-- </div>
 		</div>
 		<div class='user-panel-row'>
 			<div class="col-md-4"> --}}
 				{{!-- Section to create a new post starts here --}}
+=======
+		</div>
+		<div class='user-panel-row'>
+			<div class="col-md-4"> --}}
+>>>>>>> features/comments-posts
 				<div class='panel'>
 					<section>
 						<div class='panel-heading'>
 							<h3>
 								<span class='panel-title'> Create New Post</span>
 							</h3>
+<<<<<<< HEAD
 						</div>							
 					<br/>
+=======
+						</div>
+						<br />
+>>>>>>> features/comments-posts
 						<form class="new-post-form">
 							<div class="post-title-info">
 								<label for="post-title">Post Title</label>
@@ -70,13 +99,18 @@
 								<label for="content">Contents </label>
 								<textarea id="content" name="content" cols="40" rows="5"></textarea>
 							</div>
+<<<<<<< HEAD
 							
+=======
+
+>>>>>>> features/comments-posts
 							<button type="submit" class="content-btn">Create</button>
 						</form>
 					</section>
 				</div>
 			</div>
 		</div>
+<<<<<<< HEAD
 				
 		
 		{{#if posts.length}}
@@ -163,6 +197,96 @@
 			
 	</div>
 	
+=======
+
+
+		{{#if posts.length}}
+		<section id="user-posts">
+			<div class="panel">
+				<div class="panel-heading">
+					<h3>
+						<span class='panel-title'> Your High5! Posts</span>
+					</h3>
+				</div>
+				<ol>
+					{{#each posts as |post|}}
+					<div class="post-content">
+						{{!-- {{> post-info post}} --}}
+						<div class="post-title">
+							<h4 class='post-title'>
+								<span>{{title}}</span>
+							</h4>
+						</div>
+						<div class="post-info">
+							<div class="post-text">
+								<p>{{content}}</p>
+								<br />
+								{{!--
+							</div>
+							<div> --}}
+								<a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+								<a href="/dashboard/edit/{{id}}" class="user-links">{{comments.length}}- See
+									comment(s)</a>
+							</div>
+						</div>
+					</div>
+					{{/each}}
+				</ol>
+
+			</div>
+		</section>
+		{{/if}}
+
+		<div class="panel">
+			<article class="dashboard-items">
+				{{!-- <a href="/dashboard"> &larr; Back to dashboard</a> --}}
+
+				<div class="panel-heading">
+					<h3 class='panel-title'>
+						<span>Edit Post</span>
+					</h3>
+				</div>
+				<div class="add-post">
+					<form class="edit-post-form">
+						<div class="add-post-info">
+							<label for="comment">Add Your Post </label>
+							<input id="post-title-input" name="post-title-info" type="text" value="{{post.title}}" />
+						</div>
+
+
+						{{post.id}}
+
+						<button type="submit" class="content-btn">Save post</button>
+						{{!-- <button type="button" class="delete-post-btn">Delete post</button> --}}
+					</form>
+				</div>
+			</article>
+
+			<div class="comment-info">
+				{{#if loggedIn}}
+				<form class="comment-form">
+					<div class="add-post-info">
+						<label for="comment">Your Comments </label>
+						<textarea name="comment-body" cols="40" rows="5"></textarea>
+					</div>
+
+					<div>
+
+						<button type="submit" class="content-btn">add comment</button>
+						{{!-- <button type="button" class="content-btn upvote-btn">herelike</button> --}}
+					</div>
+				</form>
+				{{/if}}
+			</div>
+
+			{{> comments post.comments}}
+		</div>
+
+
+
+	</div>
+
+>>>>>>> features/comments-posts
 	</div>
 	</div>
 </section>
