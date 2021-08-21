@@ -1,4 +1,6 @@
-* {
+*,
+*:before,
+*:after {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
@@ -120,6 +122,20 @@ li {
 .edit-link {
 	color: #691;
 }
+/* .Grid {
+	display: flex;
+	flex-flow: row wrap;
+	align-content: flex-start;
+}
+
+.Grid-cell {
+	flex: 1 1 auto;
+	min-width: 10vw;
+	line-height: 10vw;
+	border: solid;
+	margin: 1em;
+	text-align: center;
+} */
 
 .wrapper {
 	display: flex;
@@ -1135,7 +1151,7 @@ body {
 }
 .mb-3,
 .my-3 {
-	margin-bottom: 1rem !important;
+	margin-bottom: 1.75rem !important;
 }
 
 .bg-gray-300 {

@@ -4,24 +4,28 @@
 			<div class='row' id='user-feed-card'>
 				<div class='col mb-3'>
 					<div class='card grid'>
+
 						<img
 							src='/assets/images/sign-up.png'
 							alt='Cover'
 							class='card-img-top'
 						/>
+
 						<div class='card-body text-center'>
-							<a href='/profile/user/{{id}}'><img
-									src='https://bootdey.com/img/Content/avatar/avatar{{id}}.png'
-									style='width:120px;margin-top:-95px; border-radius: 15px;'
-									alt='User'
-									class='img-fluid img-thumbnail rounded-corners border-0 mb-3'
-								/></a>
+							<div class='user-avatar'>
+								<a href='/profile/user/{{id}}'><img
+										src='https://bootdey.com/img/Content/avatar/avatar{{id}}.png'
+										style='width:120px;margin-top:-95px; border-radius: 15px;'
+										alt='User'
+										class='img-fluid img-thumbnail rounded-corners border-0 mb-3'
+									/></a>
+							</div>
 							<h2 class='card-title' align='center'><strong
 								>{{username}}{{interest_id}}
 									{{Interest_Category}}
 								</strong></h2>
 							<br />
-							<p class='text-muted font-size-sm'> </p>
+
 							<div class='Interests'>
 								{{#each UserInterest}}
 									<section class='interest'>
@@ -47,7 +51,6 @@
 								{{interest_category}}
 								{{Interest_Category}}
 							</div>
-
 						</div>
 					</div>
 					<div class='card-footer'>

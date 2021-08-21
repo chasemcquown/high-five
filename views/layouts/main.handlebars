@@ -6,57 +6,11 @@
 		<title>High 5!</title>
 
 		<link rel='stylesheet' href='/stylesheets/style.css' />
-		<!-- Latest compiled and minified CSS -->
-		{{! <link
-			rel='stylesheet'
-			href='https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css'
-			integrity='sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu'
-			crossorigin='anonymous'
-		/> }}
-
-		<!-- Optional theme -->
-		{{! <link
-			rel='stylesheet'
-			href='https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css'
-			integrity='sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ'
-			crossorigin='anonymous'
-		/> }}
 
 	</head>
 
 	<body>
 
-		{{! 
-			<nav
-				class='navbar sticky-top navbar-dark navbar-expand-md'
-				style='background-color: #168aad'
-			>
-				<div class='container-fluid'>
-					<div class='navbar-header'>
-						<a class='navbar-brand' href='#'>
-							<img
-								alt='High5! Brand Logo'
-								src='/assets/images/high5logo.png'
-								height='42'
-								width='42'
-							/>
-						</a>
-						<div>
-							<a href="/user-feed" id='user-feed' data-toggle='tab'><button  id='feed' class='btn btn-outline-success my-2 my-sm-0' >user-feed</button></a>
-							<button
-								id='logout'
-								class='btn btn-outline-success my-2 my-sm-0'
-								type='submit'
-							>Logout</button>
-						</div>
-					</div>
-				</div>
-			</nav>
-		}}
-
-		{{! <h2>
-			<a href='/'>High5!</a>
-		</h2> }}
 		<header>
 			<nav class='navbar sticky-top navbar-dark navbar-expand-md'>
 				<ul class='menu'>
@@ -71,7 +25,7 @@
 					{{#if loggedIn}}
 
 						<li class='item button btn-primary row-cols-md-3'>
-							<a href='/profile/user/{{id}}'>Profile Page</a>
+							<a href='/feed-routes'>See All Users</a>
 						</li>
 						<li class='item button btn-primary row-cols-md-3'>
 							<a href='/'>Log Out</a>
