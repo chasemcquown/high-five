@@ -10,8 +10,8 @@ const {
 } = require('../models');
 
 // this will render the login page
-router.get("/", (req, res) => {
-  res.render("layouts/homepage");
+router.get('/', (req, res) => {
+	res.render('layouts/homepage');
 });
 
 // routes to user-feed if they have account
@@ -36,7 +36,6 @@ router.get("/", (req, res) => {
 // });
 
 // get all users for user-feed page
-<<<<<<< HEAD
 router.get('/users', (req, res) => {
 	UserInterest.findAll({
 		attributes: ['id', 'user_id', 'interest_id'],
@@ -66,30 +65,11 @@ router.get('/users', (req, res) => {
 			console.log(err);
 			res.status(500).json(err);
 		});
-=======
-router.get("/user-feed", (req, res) => {
-  User.findAll({
-    attributes: ["id", "username"],
-  })
-    .then((userData) => {
-      const users = userData.map((user) => user.get({ plain: true }));
-      console.log(users);
-      res.render("user-feed", {
-        users,
-        loggedIn: req.session.loggedIn,
-      });
-      console.log(users);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
->>>>>>> features/comments-posts
 });
 
 // user will be routed to the sign-up page if they choose sign-up
-router.get("/sign-up", (req, res) => {
-  res.render("sign-up");
+router.get('/sign-up', (req, res) => {
+	res.render('sign-up');
 });
 
 module.exports = router;

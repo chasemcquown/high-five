@@ -1,10 +1,10 @@
 const Comment = require('./comment');
 
 const Follow = require('./Follow');
-const Interest = require('./interest');
-const Likes = require('./likes');
+const Interest = require('./Interest');
+const Likes = require('./Likes');
 const Post = require('./Post');
-const UserInterest = require('./user-interest');
+const UserInterest = require('./UserInterest');
 
 const User = require('./User');
 
