@@ -26,7 +26,7 @@
 
 	<div class="profile-container">
 		<div class='user-panel-row'>
-			<div class='col-md-4'>
+		<div class='col-md-4'>
 
 				<div class='panel'>
 					<div class='panel-heading'>
@@ -59,8 +59,8 @@
 							<h3>
 								<span class='panel-title'> Create New Post</span>
 							</h3>
-						</div>
-						<br />
+						</div>							
+					<br/>
 						<form class="new-post-form">
 							<div class="post-title-info">
 								<label for="post-title">Post Title</label>
@@ -70,6 +70,7 @@
 								<label for="content">Contents </label>
 								<textarea id="content" name="content" cols="40" rows="5"></textarea>
 							</div>
+							
 							<button type="submit" class="content-btn">Create</button>
 						</form>
 					</section>
@@ -90,9 +91,10 @@
 								{{#each posts as |post|}}
 										<div class="post-content">
 												{{!-- {{> post-info post}} --}}
+												
 											<div class="post-title">
 												<h4 class='post-title'>
-													<span >{{title}}</span>
+													<span >{{title}} </span>
 												</h4>
 											</div>
 											<div class="post-info">
@@ -114,7 +116,6 @@
 
 	<div class="panel">
 		<article class="dashboard-items">
-    		<a href="/dashboard"> &larr; Back to dashboard</a>
 			
 				<div class="panel-heading">
 					<h3 class='panel-title'>
@@ -154,8 +155,7 @@
 				{{/if}}
 				</div>
 
-				{{> comments post.comments}}
-	</div>					
+			</div>					
 					
 				
 			

@@ -1,4 +1,4 @@
-const Comment = require('./comment');
+const Comment = require('./Comment');
 
 const Follow = require('./Follow');
 const Interest = require('./Interest');
