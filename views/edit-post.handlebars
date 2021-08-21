@@ -1,36 +1,44 @@
 <article>
-    <a href="/dashboard"> &larr; Back to dashboard</a>
+    {{!-- <a href="/dashboard"> &larr; Back to dashboard</a> --}}
     <h2>
         Edit Post
     </h2>
     <form class="edit-post-form">
         <div>
+            <h4>Modify Post Title Below</h4>
             <input name="post-title" type="text" value="{{post.title}}" />
+            <h4>Modify Your Post Content Below</h4>
+            <input name="edit-content" type="text" value="{{post.content}}" />
+           
         </div>
         <div>
-              |
-            {{post.id}}
+            {{!-- {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date
+            post.created_at}} --}}
            
+          
+            {{!-- <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment"
+                post.comments.length}}</a>
+        </div> --}}
         <button type="submit">Save post</button>
         {{!-- <button type="button" class="delete-post-btn">Delete post</button> --}}
     </form>
 </article>
 
-{{#if loggedIn}}
 <form class="comment-form">
     <div>
         <textarea name="comment-body"></textarea>
     </div>
 
     <div>
-        <button type="submit">add comment</button>
-        <button type="button" class="upvote-btn">herelike</button>
+        <button id="submitComment" type="submit">add comment</button>
     </div>
 </form>
-{{/if}}
 
-{{> comments post.comments}}
+
+{{> comments post.Comments}}
+
 
 <script src="/javascript/edit-post.js"></script>
-{{!-- <script src="/javascript/delete-post.js"></script> --}}
+{{!--
+<script src="/javascript/delete-post.js"></script> --}}
 <script src="/javascript/comment.js"></script>
