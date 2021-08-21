@@ -1,13 +1,13 @@
-const router = require('express').Router();
-const sequelize = require('../config/connection');
+const router = require("express").Router();
+const sequelize = require("../config/connection");
 const {
-	User,
-	// Post,
-	// Comment,
-	// Likes,
-	Interest,
-	UserInterest,
-} = require('../models');
+  User,
+  // Post,
+  // Comment,
+  // Likes,
+  Interest,
+  UserInterest,
+} = require("../models");
 
 // this will render the login page
 router.get("/", (req, res) => {
@@ -36,40 +36,21 @@ router.get("/", (req, res) => {
 // });
 
 // get all users for user-feed page
-<<<<<<< HEAD
-router.get('/users', (req, res) => {
-	UserInterest.findAll({
-		attributes: ['id', 'user_id', 'interest_id'],
-		include: [
-			{
-				// include users interests (interest model)
-				model: Interest,
-				attributes: ['Interest_Category'],
-			},
-			{
-				// include users interests (interest model)
-				model: UserInterest,
-				attributes: ['Interest_Category'],
-			},
-		],
-	})
-		.then((userData) => {
-			const users = userData.map((user) => user.get({ plain: true }));
-			console.log(users);
-			res.render('user-feed', {
-				users,
-				loggedIn: req.session.loggedIn,
-			});
-			console.log(users);
-		})
-		.catch((err) => {
-			console.log(err);
-			res.status(500).json(err);
-		});
-=======
-router.get("/user-feed", (req, res) => {
-  User.findAll({
-    attributes: ["id", "username"],
+router.get("/users", (req, res) => {
+  UserInterest.findAll({
+    attributes: ["id", "user_id", "interest_id"],
+    include: [
+      {
+        // include users interests (interest model)
+        model: Interest,
+        attributes: ["Interest_Category"],
+      },
+      {
+        // include users interests (interest model)
+        model: UserInterest,
+        attributes: ["Interest_Category"],
+      },
+    ],
   })
     .then((userData) => {
       const users = userData.map((user) => user.get({ plain: true }));
@@ -84,7 +65,6 @@ router.get("/user-feed", (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
->>>>>>> features/comments-posts
 });
 
 // user will be routed to the sign-up page if they choose sign-up
