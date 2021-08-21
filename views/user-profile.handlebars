@@ -12,21 +12,20 @@
 						src='https://bootdey.com/img/Content/avatar/avatar7.png'
 						alt='...'
 					/>
-					
 				</a>
 			</div>
+		{{#each users}}	
 			<div class='media-body va-m'>
 				<h2 class='media-heading'>
 					{{user.username}}
-					
 				</h2>
-				
-				
 			</div>
+		{{/each}}	
 		</div>
 	</div>
 
-	<div class='user-panel-row'>
+	<div class="profile-container">
+		<div class='user-panel-row'>
 		<div class='col-md-4'>
 
 			<div class='panel'>
@@ -49,84 +48,127 @@
 							</div>
 				</div>
 			</div>
-			<div class="col-md-4">
+		{{!-- </div>
+		</div>
+		<div class='user-panel-row'>
+			<div class="col-md-4"> --}}
 				<div class='panel'>
 					<section>
-							<div class='panel-heading'>
-							{{!-- <span class='panel-icon'>
-								<i class='fa fa-pencil'></i>
-							</span> --}}
-					{{!-- <br> --}}
+						<div class='panel-heading'>
 							<h3>
 								<span class='panel-title'> Create New Post</span>
 							</h3>
-					
+						</div>							
+					<br/>
 						<form class="new-post-form">
-							<div>
-								<label for="post-title">Title</label>
-								<input type="text" id="post-title" name="post-title" />
+							<div class="post-title-info">
+								<label for="post-title">Post Title</label>
+								<input type="text" id="post-title-input" name="post-title" />
 							</div>
 							<div>
-								<label for="content">Content</label>
-								<input id="content" name="content" />
+								<label for="content">Contents </label>
+								<textarea id="content" name="content" cols="40" rows="5"></textarea>
 							</div>
 							
-							<button type="submit" class="btn">Create</button>
+							<button type="submit" class="content-btn">Create</button>
 						</form>
 					</section>
-					
-					{{#if posts.length}}
-					<section id="user-posts">
-						<div class="panel">
-							<div class="panel-heading">
-								<h3>Your High5! Posts</h3>
-						<ol>
-							{{#each posts as |post|}}
-							<div>
-								{{!-- {{> post-info post}} --}}
-								<h4>
-									<span class='panel-title'>{{title}}</span>
-								</h4>
-								<p>{{content}}</p>
-								<div >
-									<a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-									<a href="/profile/edit/{{id}}" class="user-links">{{comments.length}}-   See comment(s)</a>
-								</div>
-							</div>
-							{{/each}}
-						</ol>
-							</div>
-						</div>
-					</section>
-					
-					{{/if}}
-
-					
 				</div>
 			</div>
-			</div>
 		</div>
-		{{!-- <div class='col-md-8'>
-
-			<div class='tab-block'>
-				<ul class='nav nav-tabs'>
-					<li class='active'>
-						<a href='/profile' data-toggle='tab'>Add Post</a>
-					</li>
-					<li>
-						<a href='/dashboard' data-toggle='tab'>Comments</a>
-					</li>
-					<li>
-						<a href="/user-feed" id='user-feed' data-toggle='tab'>user-feed</a>
-					</li>
-				</ul>
 				
-			</div>
-		</div> --}}
+		
+		{{#if posts.length}}
+			<section id="user-posts">
+				<div class="panel">
+					<div class="panel-heading">
+									<h3>
+										<span class='panel-title'> Your High5! Posts</span>
+									</h3>
+					</div>
+							<ol>
+								{{#each posts as |post|}}
+										<div class="post-content">
+												{{!-- {{> post-info post}} --}}
+											<div class="post-title">
+												<h4 class='post-title'>
+													<span >{{title}}</span>
+												</h4>
+											</div>
+											<div class="post-info">
+												<div class="post-text">
+													<p>{{content}}</p>
+													<br/>
+												{{!-- </div>
+												<div > --}}
+													<a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+													<a href="/dashboard/edit/{{id}}" class="user-links">{{comments.length}}-   See comment(s)</a>
+												</div>
+											</div>
+										</div>
+								{{/each}}
+							</ol>
+					
+				</div>
+			</section>			
+		{{/if}}
+
+	<div class="panel">
+		<article class="dashboard-items">
+    		<a href="/dashboard"> &larr; Back to dashboard</a>
+			
+				<div class="panel-heading">
+					<h3 class='panel-title'>
+						<span >Edit Post</span>
+					</h3>
+				</div>
+				<div class="add-post">
+							<form class="edit-post-form">
+							<div class="add-post-info">
+								<label for="comment">Add Your Post  </label>
+								<input id="post-title-input"  name="post-title-info" type="text" value="{{post.title}}" />
+							</div>
+							
+								
+								{{post.id}}
+
+							<button type="submit" class="content-btn">Save post</button>
+							{{!-- <button type="button" class="delete-post-btn">Delete post</button> --}}
+						</form>
+					</div>
+</article>
+
+				<div class="comment-info">
+					{{#if loggedIn}}
+						<form class="comment-form">
+							<div class="add-post-info">
+								<label for="comment">Your Comments </label>
+								<textarea name="comment-body" cols="40" rows="5"></textarea>
+							</div>
+
+							<div>
+								
+								<button type="submit" class="content-btn">add comment</button>
+								{{!-- <button type="button" class="content-btn upvote-btn">herelike</button> --}}
+							</div>
+						</form>
+				{{/if}}
+				</div>
+
+				{{> comments post.comments}}
+	</div>					
+					
+				
+			
+	</div>
+	
+	</div>
 	</div>
 </section>
 
 <script src="/javascript/add-post.js"></script>
 <script src="/javascript/comment.js"></script>
 <script src="/javascript/user-feed.js"></script>
-{{!-- <script src="/javascript/profile.js"></script> --}}
+<script src="/javascript/profile.js"></script>
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>

@@ -20,8 +20,13 @@ router.get('/', (req, res) => {
 			{
 				// include users interests (interest model)
 				model: Interest,
-				// attributes: ['Interest_Category'],
+				attributes: ['Interest_Category'],
 			},
+			// {
+			// 	// include users interests (interest model)
+			// 	model: UserInterest,
+			// 	attributes: ['Interest_Category'],
+			// },
 		],
 	})
 		.then((userInfo) => res.json(userInfo))
@@ -40,10 +45,25 @@ router.get('/:id', (req, res) => {
 		},
 		include: [
 			{
-				// include users interests (interest model)
-				model: Interest,
-				// attributes: ['Interest_Category'],
+				model: UserInterest,
+				attributes: ['id', 'user_id', 'interest_id'],
 			},
+		],
+		include: [
+			{
+				model: Interest,
+				attributes: ['id', 'Interest_Category'],
+			},
+
+			// where: {
+			// 	id: req.params.id,
+			// },
+			// include: [
+			// 	{
+			// 		// include users interests (interest model)
+			// 		model: Interest,
+			// 		attributes: ['Interest_Category'],
+			// 	},
 
 			//{
 			//     // include how many followers user has (followers model)
