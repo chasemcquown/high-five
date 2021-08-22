@@ -64,12 +64,12 @@ router.post('/', (req, res) => {
 	User.create({
 		username: req.body.username,
 		email: req.body.email,
-		password: req.body.password,
 		interestOne: req.body.interestOne,
 		interestTwo: req.body.interestTwo,
 		interestThree: req.body.interestThree,
 		interestFour: req.body.interestFour,
-		interestFive: req.body.interestFive
+		interestFive: req.body.interestFive,
+		password: req.body.password
 	})
 		.then((dbUserData) => {
 			req.session.save(() => {

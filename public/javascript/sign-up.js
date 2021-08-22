@@ -3,6 +3,7 @@ const signupBtn = document.querySelector('#signupBtn');
 
 // send user's info to database
 async function signupHandler(event) {
+
 	event.preventDefault();
 	// retrieve username value
 	const username = document.querySelector('#inputUsername3').value.trim();
@@ -21,7 +22,7 @@ async function signupHandler(event) {
 	if (password && email && username && interestOne && interestTwo && interestThree && interestFour && interestFive) {
 		const response = await fetch('/api/user', {
 			method: 'Post',
-			body: JSON.stringify({ username, email, password, interestOne, interestTwo, interestThree, interestFour, interestFive }),
+			body: JSON.stringify({ username, email, interestOne, interestTwo, interestThree, interestFour, interestFive, password }),
 			headers: { 'Content-Type': 'application/json' },
 		});
 		if (response.ok) {

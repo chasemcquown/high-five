@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
 				users,
 				loggedIn: req.session.loggedIn,
 			});
-			c
+			
 		})
 		.catch((err) => {
 			console.log(err);

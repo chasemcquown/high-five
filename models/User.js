@@ -27,32 +27,37 @@ User.init(
       allowNull: false,
       unique: true,
     },
+    interestOne: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: false
+    },
+    interestTwo: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: false
+    },
+    interestThree: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: false
+    },
+    interestFour: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: false
+    },
+    interestFive: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: false
+    },  
     password: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [5],
-      },
-    interestOne: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    interestTwo: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    interestThree: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    interestFour: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    interestFive: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },  
+      }
     },
   },
   {
