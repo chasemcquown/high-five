@@ -1,10 +1,8 @@
 const Comment = require('./Comment');
 
-const Follow = require('./Follow');
-const Interest = require('./Interest');
-const Likes = require('./Likes');
-const Post = require('./Post');
-const UserInterest = require('./UserInterest');
+const Follow=require('./Follow');
+const Likes=require('./likes');
+const Post=require('./Post');
 
 const User = require('./User');
 
@@ -50,19 +48,7 @@ Likes.belongsTo(User, {
 	onDelete: 'cascade',
 });
 
-/*creates many to many relation. using a join table.*/
-User.belongsToMany(Interest, {
-	through: UserInterest,
-	foreignKey: 'user_id',
-});
-
-/*creates many to many relation. using a join table.*/
-Interest.belongsToMany(User, {
-	through: UserInterest,
-	foreignKey: 'interest_id',
-});
-
-//User can like many posts (one to many
+//User can like many posts (one to many 
 User.hasMany(Follow, {
 	foreignKey: 'user_id',
 	as: 'Followed ',
@@ -129,4 +115,6 @@ Comment.belongsTo(Post, {
 	onDelete: 'cascade',
 });
 
-module.exports = { User, Post, Comment, Likes, Interest, UserInterest, Follow };
+
+module.exports = { User, Post, Comment,Likes, Follow};
+

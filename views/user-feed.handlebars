@@ -26,29 +26,27 @@
 							<br />
 
 							<div class='Interests'>
-								{{#each Interest}}
-									<section class='interest'>
-										<div class='meta'>
-											{{username}}
-											{{!-- on
-										{{format_date created_at}} --}}
-										</div>
-										<div class='text'>
-											{{interest_id}}
-											{{!-- {{Interest_Category}} --}}
-											console.log("sticky-top")
-										</div>
-									</section>
-								{{/each}}
-							</div>
 
+								{{!-- {{#each Interests}} --}}
+								<section class='interest'>
+									<div class='meta'>
+										{{email}}
+										{{!-- on
+											{{format_date created_at}} --}}
+									</div>
+									{{!-- <div class='text'>
+										{{Interest_Category}}
+									</div> --}}
+								</section>
+								{{!-- {{/each}} --}}
+							</div>
 							<div class='interests'>
-								<h3><strong>Interests</strong></h3>
-								{{!-- {{interest_id}} --}}
-								{{!-- {{data}} --}}
-								{{!-- {{Interests}} --}}
-								{{!-- {{interest_category}} --}}
-								{{Interest_Category}}
+								<h3><strong>Interests:</strong></h3>
+								<li> {{interestOne}}</li>
+								<li> {{interestTwo}}</li>
+								<li> {{interestThree}}</li>
+								<li> {{interestFour}}</li>
+								<li> {{interestFive}}</li>
 							</div>
 						</div>
 					</div>
