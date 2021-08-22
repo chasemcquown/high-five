@@ -1,40 +1,51 @@
-<article>
-    {{!-- <a href="/dashboard"> &larr; Back to dashboard</a> --}}
-    <h2>
-        Edit Post
-    </h2>
-    <form class="edit-post-form">
-        <div>
-            <h4>Modify Post Title Below</h4>
-            <input name="post-title" type="text" value="{{post.title}}" />
-            <h4>Modify Your Post Content Below</h4>
-            <input name="edit-content" type="text" value="{{post.content}}" />
-           
+
+
+
+
+
+{{!-- new one --}}
+<div class="panel">
+    <article class="dashboard-items">
+
+        <div class="panel-heading">
+            <h3 class='panel-title'>
+                <span>Edit Post</span>
+            </h3>
         </div>
-        <div>
-            {{!-- {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date
-            post.created_at}} --}}
-           
-          
-            {{!-- <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment"
-                post.comments.length}}</a>
-        </div> --}}
-        <button type="submit">Save post</button>
-        <button type="button" class="delete-post-btn">Delete post</button>
-    </form>
-</article>
+        <div class="add-post">
+            <form class="edit-post-form">
+                <div class="add-post-info">
+                    {{!-- <label for="comment">Add Your Post </label> --}}
+                    <h4>Modify Post Title Below</h4>
+                    <input id="post-title-input" name="post-title" type="text" value="{{post.title}}" />
+                    <h4>Modify Your Post Content Below</h4>
+                    <input name="edit-content" type="text" value="{{post.content}}" />
+                </div>
 
-<form class="comment-form">
-    <div>
-        <textarea name="comment-body"></textarea>
+                <button type="submit" class="content-btn">Save post</button>
+                <button type="button" class="content-btn delete-post-btn">Delete post</button>
+            </form>
+        </div>
+    </article>
+
+    <div class="comment-info">
+        {{#if loggedIn}}
+        <form class="comment-form">
+            <div class="add-post-info">
+                <label for="comment">Your Comments </label>
+                <textarea name="comment-body" cols="40" rows="5"></textarea>
+            </div>
+
+            <div>
+
+                <button id="submitComment" type="submit" class="content-btn">add comment</button>
+               
+            </div>
+        </form>
+        {{/if}}
     </div>
 
-    <div>
-        <button id="submitComment" type="submit">add comment</button>
-    </div>
-</form>
-
-
+</div>
 {{> comments post.Comments}}
 
 
