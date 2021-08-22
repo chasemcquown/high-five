@@ -2,7 +2,7 @@
 
 <section id='content' class='container'>
 	<!-- Begin .page-heading -->
-	<div class='page-heading'>
+	{{!-- <div class='page-heading'>
 		<div class='profile-container'>
 			<div class='media clearfix'>
 				<div class='media-left pr30'>
@@ -27,39 +27,65 @@
 				</p>
 			</div>
 		{{/each}}
-	</div>
-	<div class='container'>
-		<div class='profile-container'>
-			<div class='user-panel-row'>
-				<div class='col-md-4'>
-					<div class='panel'>
-						<div class='panel-heading'>
-							<h3>
-								<span class='panel-title'> <strong>My Interests</strong></span>
-							</h3>
-						</div>
-						<div class='col'>
-							<div class='interests panel-body pb5'>
-								<!-- Find the interests for a given user and list them on their profile -->
-								{{#each this}}
-									<li> {{interestOne}}</li>
-									<li> {{interestTwo}}</li>
-									<li> {{interestThree}}</li>
-									<li> {{interestFour}}</li>
-									<li> {{interestFive}}</li>
-								{{/each}}
-							</div>
-						</div>
-					</div>
+	</div> --}}
+
+	<div class='card'>
+		<div class='card-image'>
+			<figure class='image is-4by3'>
+				<a href='#'>
+					<img
+						class='media-object mw150'
+						src='https://bootdey.com/img/Content/avatar/avatar7.png'
+						alt='...'
+					/>
+				</a>
+			</figure>
+		</div>
+		<div class='card-content'>
+			<div class='media'>
+				<div class='media-left'>
+					<figure class='image is-48x48'>
+						<img
+						<li class='logo col-6'><a class='navbar-brand' href='/dashboard'>
+							<img
+								role='img'
+								aria-label='Go To Dashboard'
+								alt='High5! Brand Logo'
+								src='/assets/images/high5logo.png'
+								height='42'
+								width='42'
+							/>
+						</a></li>
+					</figure>
 				</div>
+				{{#each this}}
+					<div class='media-content'>
+						<h3 class='title is-4'>{{username}}</h3>
+						<p class='subtitle is-6'>{{email}}</p>
+					</div>
+				{{/each}}
+			</div>
+<br/>
+			<div class='content'>
+				<h3 class="about-me-title">
+					About Me
+				</h3>
+				<div class="about-me-body">
+					{{faker "lorem.paragraph"}}
+				</div>
+				
+				<br />
+				<time datetime='2016-1-1'>11:09 PM - 1 Jan 2016</time>
 			</div>
 		</div>
 	</div>
-	<div class='container'>
+
+	
+	<div class='interest-container'>
 		<div class='profile-container'>
 			<div class='user-panel-row'>
 				<div class='col-md-4'>
-					<div class='panel'>
+					<div class='interest-panel'>
 						<div class='panel-heading'>
 							<h3>
 								<span class='panel-title'> <strong>My Interests</strong></span>
