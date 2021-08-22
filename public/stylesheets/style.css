@@ -257,10 +257,10 @@ body {
 
 .page-heading {
 	position: relative;
-	padding: 30px 40px;
-	margin: -5px -20px 25px;
+	padding: 40px 0 0 0;
+	margin: 5px 20px 25px;
 	border-bottom: 1px solid #d9d9d9;
-	background-color: #f2f2f2;
+	background-color: none;
 }
 .page-tabs {
 	margin: -25px -20px 30px;
@@ -382,6 +382,7 @@ body {
 .panel-heading {
 	position: relative;
 	height: 52px;
+	width: 260px;
 	line-height: 49px;
 	letter-spacing: 0.2px;
 	color: #999999;
@@ -1201,13 +1202,13 @@ body {
 	display: none;
 }
 
-/* .container {
+.container {
 	height: 90vh;
 	margin: 2rem;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
-} */
+}
 
 /* .row {
 	box-sizing: border-box;
