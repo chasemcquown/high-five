@@ -48,8 +48,7 @@ router.get('/:id', (req, res) => {
 				model: UserInterest,
 				attributes: ['id', 'user_id', 'interest_id'],
 			},
-		],
-		include: [
+
 			{
 				model: Interest,
 				attributes: ['id', 'Interest_Category'],

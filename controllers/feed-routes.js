@@ -1,8 +1,44 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { User, UInterest } = require('../models');
+const {
+	User,
+	Interest,
+	UserInterest,
+
+	Comment,
+	Likes,
+} = require('../models');
 
 // get all users for user-feed page
+router.get('/', (req, res) => {
+	User.findAll({
+		// attributes: ['id', 'Interest_Category'],
+		include: [
+			{
+				// model: UserInterest,
+				// attributes: ['id', 'username'],
+			},
+			{
+				// include users interests (interest model)
+				model: Interest,
+				attributes: ['Interest_Category'],
+			},
+		],
+	})
+		.then((userData) => {
+			const users = userData.map((user) => user.get({ plain: true }));
+			console.log(users);
+			res.render('user-feed', {
+				users,
+				loggedIn: req.session.loggedIn,
+			});
+			console.log(users);
+		})
+		.catch((err) => {
+			console.log(err);
+			res.status(500).json(err);
+		});
+});
 router.get('/', (req, res) => {
 	User.findAll({
 		attributes: ['id', 'username'],
