@@ -83,6 +83,3 @@ app.use(require("./controllers/"));
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`http://localhost:${PORT}`));
 });
-
-//TODO: Remove port below once models and seeds are complete
-///app.listen(PORT, () => console.log("Now listening"));

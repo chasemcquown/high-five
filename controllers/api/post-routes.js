@@ -108,5 +108,25 @@ router.put("/like", (req, res) => {
     });
 });
 1;
+//to delete a specific post based on id
+router.delete("/:id", (req, res) => {
+  console.log("id", req.params.id);
+  Post.destroy({
+    where: {
+      id: req.params.id,
+    },
+  })
+    .then((dbPostData) => {
+      if (!dbPostData) {
+        res.status(404).json({ message: "No post found with this id" });
+        return;
+      }
+      res.json(dbPostData);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
 module.exports = router;
