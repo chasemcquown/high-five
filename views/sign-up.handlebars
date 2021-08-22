@@ -1,5 +1,5 @@
 <div class='principal-container'>
-	<div class='container'>
+	<div class='signup-container'>
 		<div class='row'>
 			<div class='col-md-4 img-content'>
 				<img
@@ -8,60 +8,67 @@
 				/>
 			</div>
 			<div class='col-md-7 form-content'>
-				<h1 class='title'>High5!</h1>
+			<div class="app-bio">
+					<h1 class='title'>High5!</h1>
 
-				<p>
-					Are you bored? Don't have plans tonight? We have the perfect app for
-					you. This app will help you find a close-knit group of people that you
-					can vent to about your problems or share your excitement about your
-					team winning the championship. If you're new to town or just want to
-					connect with new people join High 5! High 5! allows you to create
-					blogs, interact with blogs, and follow current members that have
-					similar interests as you. Sign up today!
-				</p>
-
-				<div class='sign-up-form'>
-					<form class='form-horizontal' role='form'>
-						<div class='form-group mb-3'>
-							{{! <label for='inputEmail3' class='form-label'>Email</label> }}
-							<div class='col-sm-10'>
-								<input
-									type='email'
-									class='form-control'
-									id='inputEmail3'
-									placeholder='Email'
-								/>
-							</div>
-						</div>
-						<div class='form-group mb-3'>
-							{{! <label
-							for='inputUsername3'
-							class='col-sm-2 form-label'
-						>Username</label> }}
-							<div class='col-sm-10'>
-								<input
-									type='username'
-									class='form-control'
-									id='inputUsername3'
-									placeholder='Username'
-								/>
-							</div>
-						</div>
-						<div class='form-group mb-3'>
-							{{! <label
-							for='inputPassword3'
-							class='col-sm-2 form-label'
-						>Password</label> }}
-							<div class='col-sm-10'>
-								<input
-									type='password'
-									class='form-control'
-									id='inputPassword3'
-									placeholder='Password'
-								/>
-							</div>
+					<p>
+						Are you bored? Don't have plans tonight? We have the perfect app for
+						you. This app will help you find a close-knit group of people that you
+						can vent to about your problems or share your excitement about your
+						team winning the championship. If you're new to town or just want to
+						connect with new people join High 5! High 5! allows you to create
+						blogs, interact with blogs, and follow current members that have
+						similar interests as you. Sign up today!
+					</p>
+			</div>
+		</div>
+	</div>	
+			<div class="login-box">
+				<form class="box">
+					<div class="field">
+						<p class="control has-icons-left has-icons-right">
+							<input class="input" type="email" placeholder="Email">
+							<span class="icon is-small is-left">
+							<i class="fas fa-envelope"></i>
+							</span>
+							<span class="icon is-small is-right">
+							<i class="fas fa-check"></i>
+							</span>
+						</p>
+					</div>
+					<div class="field">
+						<label class="label">Username</label>
+						<div class="control">
+							<p class="control has-icons-left">
+							<input class="input" type="username" placeholder="Username">
+							<span class="icon is-small is-left">
+							<i class="fas fa-user"></i>
+							</span>
 						</div>
 					</div>
+					<div class="field">
+						<label class="label">Password</label>
+						<div class="control">
+							<p class="control has-icons-left">
+							<input class="input" type="password" placeholder="Password">
+							<span class="icon is-small is-left">
+							<i class="fas fa-lock"></i>
+							</span>
+						</div>
+					</div>
+					{{!-- <button class="button is-primary">Sign in</button> --}}
+				</form>
+			</div>
+	</div>
+
+
+
+
+
+
+
+
+
 					<h3>Enter your five interests below!</h3>
 					<div class='form-group mb-3'>
 						{{! <label
@@ -145,9 +152,9 @@
 							</div>
 						</div>
 					</form>
-				</div>
-			</div>
-		</div>
+			
+		
+		
 	</div>
 </div>
 
