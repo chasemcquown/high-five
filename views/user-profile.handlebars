@@ -31,9 +31,7 @@
 
 				<div class='panel'>
 					<div class='panel-heading'>
-						{{!-- <span class='panel-icon'>
-							<i class='fa fa-trophy'></i>
-						</span> --}}
+					
 						<h3>
 							<span class='panel-title'> <strong>My Interests</strong></span>
 						</h3>
@@ -49,11 +47,7 @@
 								{{/each}}
 							</div>
 				</div>
-				{{!--
-			</div>
-		</div>
-		<div class='user-panel-row'>
-			<div class="col-md-4"> --}}
+				
 				<div class='panel'>
 					<section>
 						<div class='panel-heading'>
@@ -89,7 +83,7 @@
 									</h3>
 					</div>
 							<ol>
-								{{#each posts as |post|}}
+								{{#each this}}
 										<div class="post-content">
 												{{!-- {{> post-info post}} --}}
 												
@@ -115,48 +109,7 @@
 			</section>			
 		{{/if}}
 
-	<div class="panel">
-		<article class="dashboard-items">
-			
-				<div class="panel-heading">
-					<h3 class='panel-title'>
-						<span >Edit Post</span>
-					</h3>
-				</div>
-				<div class="add-post">
-							<form class="edit-post-form">
-							<div class="add-post-info">
-								<label for="comment">Add Your Post  </label>
-								<input id="post-title-input"  name="post-title-info" type="text" value="{{post.title}}" />
-							</div>
-							
-								
-								{{post.id}}
-
-							<button type="submit" class="content-btn">Save post</button>
-							{{!-- <button type="button" class="delete-post-btn">Delete post</button> --}}
-						</form>
-					</div>
-</article>
-
-				<div class="comment-info">
-					{{#if loggedIn}}
-						<form class="comment-form">
-							<div class="add-post-info">
-								<label for="comment">Your Comments </label>
-								<textarea name="comment-body" cols="40" rows="5"></textarea>
-							</div>
-
-							<div>
-								
-								<button type="submit" class="content-btn">add comment</button>
-								{{!-- <button type="button" class="content-btn upvote-btn">herelike</button> --}}
-							</div>
-						</form>
-				{{/if}}
-				</div>
-
-			</div>					
+					
 					
 				
 			
