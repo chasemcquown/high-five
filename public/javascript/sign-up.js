@@ -27,7 +27,7 @@ async function signupHandler(event) {
 		});
 		if (response.ok) {
 			console.log('All good!');
-			document.location.replace('user-feed');
+			document.location.replace('feed-routes');
 		} else {
 			alert(response.statusText);
 		}

@@ -17,7 +17,7 @@
 			</div>
 			<div class='media-body va-m'>
 				<h2 class='media-heading'>
-					{{user.username}}
+					
 					
 				</h2>
 				
@@ -40,12 +40,13 @@
 				</div>
 				<div class="col">
 						<div class='interests panel-body pb5'>
-						
-								<li> {{faker 'commerce.product'}}</li>
-								<li> {{faker 'commerce.productName'}}</li>
-								<li> {{faker 'address.country'}}</li>
-								<li> {{faker 'commerce.product'}}</li>
-								<li> {{faker 'commerce.productName'}}</li>
+							{{#each this}}
+								<li> {{interestOne}}</li>
+								<li> {{interestTwo}}</li>
+								<li> {{interestThree}}</li>
+								<li> {{interestFour}}</li>
+								<li> {{interestFive}}</li>
+								{{/each}}
 							</div>
 				</div>
 			</div>
