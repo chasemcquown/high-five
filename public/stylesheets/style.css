@@ -83,9 +83,20 @@ li {
 	border-bottom-left-radius: 0px !important;
 	border-bottom-right-radius: 0px !important;
 }
-.img-sign-up {
-	width: 33%;
+
+.principal-container {
+	box-sizing: border-box;
+	padding: 0;
+	margin: o;
 }
+
+.signup-container {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
 #logout {
 	background: #4527a0;
 	color: white;
