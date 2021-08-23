@@ -1,31 +1,60 @@
-<section>
-  <h2>Create New Post</h2>
+<div class='panel'>
+	<section>
+		<div class='panel-heading'>
+			<h3>
+				<span class='panel-title'> Create New Post</span>
+			</h3>
+		</div>
+		<br />
+		<form class="new-post-form">
+			<div class="post-title-info">
+				<label for="post-title">Post Title</label>
+				<input type="text" id="post-title-input" name="post-title" />
+			</div>
+			<div>
+				<label for="content">Contents </label>
+				<textarea id="content" name="content" cols="40" rows="5"></textarea>
+			</div>
 
-  <form class="new-post-form">
-    <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
-    </div>
-    <div>
-      <label for="post-url">Link</label>
-      <input id="post-url" name="post-url" />
-    </div>
-    <button type="submit" class="btn">Create</button>
-  </form>
-</section>
+			<button type="submit" class="content-btn">Create</button>
+		</form>
+	</section>
+</div>
+</div>
+</div>
+
 
 {{#if posts.length}}
-<section>
-  <h2>Your Posts</h2>
-  <ol>
-    {{#each posts as |post|}}
-    <li>
-     {{title}}
-     {{content}}
-    </li>
-    {{/each}}
-  </ol>
+<section id="user-posts">
+	<div class="interest-panel">
+		<div class="panel-heading">
+			<h3>
+				<span class='interest-container panel-title'> Your High5! Posts</span>
+			</h3>
+		</div>
+		<ol>
+			{{#each posts as |post|}}
+			<div class="post-content">
+
+				<div class="post-title">
+					<h4 class='post-title'>
+						<span>{{title}} </span>
+					</h4>
+				</div>
+				<div class="post-info">
+					<div class="interests post-text">
+						<p>{{content}}</p>
+						<br />
+					
+						<a href="/dashboard/edit/{{post.id}}" class="link-dark">Edit post/See Comments</a>
+					</div>
+				</div>
+			</div>
+			{{/each}}
+		</ol>
+	</div>
 </section>
 {{/if}}
 
+{{> comments post.Comments}}
 <script src="/javascript/add-post.js"></script>
