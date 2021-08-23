@@ -26,16 +26,15 @@
 
 {{#if posts.length}}
 <section id="user-posts">
-	<div class="panel">
+	<div class="interest-panel">
 		<div class="panel-heading">
 			<h3>
-				<span class='panel-title'> Your High5! Posts</span>
+				<span class='interest-container panel-title'> Your High5! Posts</span>
 			</h3>
 		</div>
 		<ol>
 			{{#each posts as |post|}}
 			<div class="post-content">
-				{{!-- {{> post-info post}} --}}
 
 				<div class="post-title">
 					<h4 class='post-title'>
@@ -43,14 +42,11 @@
 					</h4>
 				</div>
 				<div class="post-info">
-					<div class="post-text">
+					<div class="interests post-text">
 						<p>{{content}}</p>
 						<br />
-						{{!--
-					</div>
-					<div> --}}
-						<a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-						<a href="/dashboard/edit/{{id}}" class="user-links">{{comments.length}}- See comment(s)</a>
+					
+						<a href="/dashboard/edit/{{post.id}}" class="link-dark">Edit post/See Comments</a>
 					</div>
 				</div>
 			</div>
