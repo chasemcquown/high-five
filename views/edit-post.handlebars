@@ -1,39 +1,58 @@
-<article>
-    <a href="/dashboard"> &larr; Back to dashboard</a>
-    <h2>
-        Edit Post
-    </h2>
-    <form class="edit-post-form">
-        <div>
-            <input name="post-title" type="text" value="{{post.title}}" />
-            {{!-- <span>({{format_url post.post_url}})</span> --}}
+
+{{!-- Edit Post --}}
+<div class="panel">
+    <article class="interest dashboard-items">
+                <h1>
+                    Edit Post
+                </h1>
+        <div class="add-post">
+            
+            <form class="interests edit-post-form">
+                
+                <div class="add-post-info">
+                    {{!-- <label for="comment">Add Your Post </label> --}}
+                    <h4 class="post-title">Modify Post Title Below</h4>
+                    <input id="post-title-input" name="post-title" type="text" value="{{post.title}}" />
+                    <h4 class="post-title">Modify Your Post Content Below</h4>
+                    <textarea name="edit-content" type="text" cols="65" rows="5" value="{{post.content}}"></textarea>
+                </div>
+                <div>
+                    <a class="" href="/dashboard"> &larr; Back to dashboard</a>
+                <button type="submit" class="content-btn">Save post</button>
+                <button type="button" class="content-btn delete-post-btn">Delete post</button>
+            </div>
+            </form>
         </div>
-        <div>
-            {{!-- {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date post.created_at}} --}}
-            |
-            {{post.id}}
-            {{!-- <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
-        </div> --}}
-        <button type="submit">Save post</button>
-        {{!-- <button type="button" class="delete-post-btn">Delete post</button> --}}
-    </form>
-</article>
+    </article>
+</div>
+<div class="panel"></div>
 
-{{#if loggedIn}}
-<form class="comment-form">
-    <div>
-        <textarea name="comment-body"></textarea>
+{{!-- Add a comment section --}}
+<div class="panel">
+    <div class="comment-info">
+        {{#if loggedIn}}
+        <div >
+            <h2>
+               Add a Comment
+            </h2>
+        </div>
+        <form class=" interests comment-form">
+            <div class="add-post-info">
+                <label for="comment">Your Comments </label>
+                <textarea name="comment-body" cols="40" rows="5"></textarea>
+            </div>
+            <div>
+            <button id="submitComment" type="submit" class="content-btn">add comment</button>
+            </div>
+        </form>
+        {{/if}}
     </div>
+</div>
 
-    <div>
-        <button type="submit">add comment</button>
-        <button type="button" class="upvote-btn">herelike</button>
-    </div>
-</form>
-{{/if}}
+{{> comments post.Comments}}
 
-{{> comments post.comments}}
 
 <script src="/javascript/edit-post.js"></script>
-{{!-- <script src="/javascript/delete-post.js"></script> --}}
+
+<script src="/javascript/delete-post.js"></script>
 <script src="/javascript/comment.js"></script>

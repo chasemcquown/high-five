@@ -1,144 +1,67 @@
 <section id='user' class='superbox-list constainer-fluid grid'>
-	<div class='main-feed user'>
-		{{#each users}}
-			<div
-				class='row row-cols-4 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 gutters-sm'
-				id='user-feed-card'
-			>
-				<div class='col mb-3 block-grid-xs-2 block-grid-sm-3 block-grid-md-4'>
+	{{#each users}}
+		<div class='main-feed user'>
+			<div class='row' id='user-feed-card'>
+				<div class='col mb-3'>
 					<div class='card grid'>
+
 						<img
 							src='/assets/images/sign-up.png'
 							alt='Cover'
 							class='card-img-top'
 						/>
+
 						<div class='card-body text-center'>
-							<a href='profile/user/{{id}}'><img
-									src='https://bootdey.com/img/Content/avatar/avatar{{id}}.png'
-									style='width:120px;margin-top:-95px; border-radius: 15px;'
-									alt='User'
-									class='img-fluid img-thumbnail rounded-corners border-0 mb-3'
-								/></a>
-							<h2 class='card-title' align='center'><strong>{{username}}
+							<div class='user-avatar'>
+								<a href='/feed-routes/user/{{id}}'><img
+										src='https://bootdey.com/img/Content/avatar/avatar{{id}}.png'
+										style='width:120px;margin-top:-95px; border-radius: 15px;'
+										alt='User'
+										class='img-fluid img-thumbnail rounded-corners border-0 mb-3'
+									/></a>
+							</div>
+							<h2 class='card-title' align='center'><strong>
+									{{username}}
 								</strong></h2>
+							<h3 class='card-title' align='center'>{{email}}</h3>
 							<br />
-							<p class='text-muted font-size-sm'> </p>
+
 							<div class='Interests'>
+
 								{{!-- {{#each Interests}} --}}
 								<section class='interest'>
 									<div class='meta'>
-										{{username}}
+
 										{{!-- on
 											{{format_date created_at}} --}}
 									</div>
-									<div class='text'>
+									{{!-- <div class='text'>
 										{{Interest_Category}}
-									</div>
+									</div> --}}
 								</section>
 								{{!-- {{/each}} --}}
 							</div>
-							{{!-- <div class='interests'>
-								<h3><strong>Interests:</strong></h3>
-								<li> {{faker 'commerce.product'}}</li>
-								<li> {{faker 'commerce.productName'}}</li>
-								<li> {{faker 'address.country'}}</li>
-								<li> {{faker 'commerce.product'}}</li>
-								<li> {{faker 'commerce.productName'}}</li>
-							</div> --}}
-						</div>
-					</div>
-					<div class='card-footer'>
-						<button
-							class='btn btn-light btn-sm bg-white has-icon btn-block'
-							type='button'
-						><i class='material-icons'>add</i>Follow</button>
-						<button
-							class='btn btn-light btn-sm bg-white has-icon ml-2'
-							type='button'
-						><svg
-								xmlns='http://www.w3.org/2000/svg'
-								width='24'
-								height='24'
-								viewBox='0 0 24 24'
-								fill='none'
-								stroke='currentColor'
-								stroke-width='2'
-								stroke-linecap='round'
-								stroke-linejoin='round'
-								class='feather feather-message-circle'
-							><path
-									d='M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z'
-								></path></svg></button>
-					</div>
-				</div>
-			</div>
-		{{/each}}
+							<div class='interest'>
+								<h3>INTERESTS</h3>
 
-	</div>
-	<div class='main-feed user'>
-		{{#each users}}
-			<div
-				class='row row-cols-4 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 gutters-sm'
-				id='user-feed-card'
-			>
-				<div class='col mb-3 block-grid-xs-2 block-grid-sm-3 block-grid-md-4'>
-					<div class='card'>
-						<img
-							src='/assets/images/sign-up.png'
-							alt='Cover'
-							class='card-img-top'
-						/>
-						<div class='card-body text-center'>
-							<a href='profile/user/{{id}}'><img
-									src='https://bootdey.com/img/Content/avatar/avatar{{id}}.png'
-									style='width:120px;margin-top:-95px; border-radius: 15px;'
-									alt='User'
-									class='img-fluid img-thumbnail rounded-corners border-0 mb-3'
-								/></a>
-							<h5 class='card-title'><strong>Username:
-								</strong>{{username}}</h5>
-
-							<p class='text-muted font-size-sm'> </p>
-
-							<div class='interests'>
-								<h5><strong>Interests:</strong></h5>
-								<li> {{faker 'lorem.words' 2}}</li>
-								<li> {{faker 'lorem.words' 2}}</li>
-								<li> {{faker 'lorem.words' 1}}</li>
-								<li> {{faker 'lorem.words' 2}}</li>
-								<li> {{faker 'lorem.words' 2}}</li>
+								<li> {{interestOne}}</li>
+								<li> {{interestTwo}}</li>
+								<li> {{interestThree}}</li>
+								<li> {{interestFour}}</li>
+								<li> {{interestFive}}</li>
 							</div>
 						</div>
 					</div>
-					<div class='card-footer'>
-						<button
-							class='btn btn-light btn-sm bg-white has-icon btn-block'
-							type='button'
-						><i class='material-icons'>add</i>Follow</button>
-						<button
-							class='btn btn-light btn-sm bg-white has-icon ml-2'
-							type='button'
-						><svg
-								xmlns='http://www.w3.org/2000/svg'
-								width='24'
-								height='24'
-								viewBox='0 0 24 24'
-								fill='none'
-								stroke='currentColor'
-								stroke-width='2'
-								stroke-linecap='round'
-								stroke-linejoin='round'
-								class='feather feather-message-circle'
-							><path
-									d='M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z'
-								></path></svg></button>
-					</div>
+
 				</div>
 			</div>
-		{{/each}}
-
+		</div>
+	{{/each}}
+	<div class='footer'>
+		<h4 class='footer-title'>
+			This is the footer!
+		</h4>
 	</div>
-
 </section>
 
 <script src='/javascript/user-feed.js'></script>
