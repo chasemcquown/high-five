@@ -1,51 +1,54 @@
 
-
-
-
-<a href="/dashboard"> &larr; Back to dashboard</a>
-{{!-- new one --}}
+{{!-- Edit Post --}}
 <div class="panel">
-    <article class="dashboard-items">
-
-        <div class="panel-heading">
-            <h3 class='panel-title'>
-                <span>Edit Post</span>
-            </h3>
-        </div>
+    <article class="interest dashboard-items">
+                <h1>
+                    Edit Post
+                </h1>
         <div class="add-post">
-            <form class="edit-post-form">
+            
+            <form class="interests edit-post-form">
+                
                 <div class="add-post-info">
                     {{!-- <label for="comment">Add Your Post </label> --}}
-                    <h4>Modify Post Title Below</h4>
+                    <h4 class="post-title">Modify Post Title Below</h4>
                     <input id="post-title-input" name="post-title" type="text" value="{{post.title}}" />
-                    <h4>Modify Your Post Content Below</h4>
-                    <input name="edit-content" type="text" value="{{post.content}}" />
+                    <h4 class="post-title">Modify Your Post Content Below</h4>
+                    <textarea name="edit-content" type="text" cols="65" rows="5" value="{{post.content}}"></textarea>
                 </div>
-
+                <div>
+                    <a class="" href="/dashboard"> &larr; Back to dashboard</a>
                 <button type="submit" class="content-btn">Save post</button>
                 <button type="button" class="content-btn delete-post-btn">Delete post</button>
+            </div>
             </form>
         </div>
     </article>
+</div>
+<div class="panel"></div>
 
+{{!-- Add a comment section --}}
+<div class="panel">
     <div class="comment-info">
         {{#if loggedIn}}
-        <form class="comment-form">
+        <div >
+            <h2>
+               Add a Comment
+            </h2>
+        </div>
+        <form class=" interests comment-form">
             <div class="add-post-info">
                 <label for="comment">Your Comments </label>
                 <textarea name="comment-body" cols="40" rows="5"></textarea>
             </div>
-
             <div>
-
-                <button id="submitComment" type="submit" class="content-btn">add comment</button>
-               
+            <button id="submitComment" type="submit" class="content-btn">add comment</button>
             </div>
         </form>
         {{/if}}
     </div>
-
 </div>
+
 {{> comments post.Comments}}
 
 
