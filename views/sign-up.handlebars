@@ -1,42 +1,43 @@
 <div class='principal-container'>
 	<div class='signup-container'>
-		<article class='media'>
-			<figure class='media-left'>
-				<p class='image is-64x64'>
-					<img
-						class='img-thumbnail'
-						src='/assets/images/sign-up.png'
-						width='396'
-						height='365'
-					/></p>
-			</figure>
-			<div class='media-content'>
-				<div class='content'>
+		<div class='row'>
+			<div class='col-md-4 img-content'>
+				<img
+					class='img-sign-up img-thumbnail'
+					src='/assets/images/sign-up.png'
+				/>
+			</div>
+			<div class='col-md-7 form-content'>
+			<div class="app-bio">
 					<h1 class='title'>High5!</h1>
+
 					<p>
 						Are you bored? Don't have plans tonight? We have the perfect app for
-						you This app will help you find a close-knit group of people that
-						you can vent to about your problems or share your excitement about
-						your team winning the championship. If you're new to town or just
-						want to connect with new people join High 5! High 5! allows you to
-						create blogs, interact with blogs, and follow current members that
-						have similar interests as you. Sign up today!
+						you. This app will help you find a close-knit group of people that you
+						can vent to about your problems or share your excitement about your
+						team winning the championship. If you're new to town or just want to
+						connect with new people join High 5! High 5! allows you to create
+						blogs, interact with blogs, and follow current members that have
+						similar interests as you. Sign up today!
 					</p>
-				</div>
 			</div>
-		</article>
-		<div class="login-form">
-		<div class="login-box">
+		</div>
+	</div>	
+			<div class="login-box">
 				<form class="box">
 					<div class="field">
 						<label class="label">Email</label>
 						<p class="control has-icons-left has-icons-right">
 							<input  id="inputEmail3" class="input is-normal" type="email" placeholder="Email">
 							<span class="icon is-small is-left">
-							<i class="far fa-envelope"></i>
+							<i class="fas fa-envelope"></i>
 							</span>
-						</div>
-					</div><div class="field">
+							<span class="icon is-small is-right">
+							<i class="fas fa-check"></i>
+							</span>
+						</p>
+					</div>
+					<div class="field">
 						<label class="label">Username</label>
 						<div class="control">
 							<p class="control has-icons-left">
@@ -56,44 +57,105 @@
 							</span>
 						</div>
 					</div>
+					{{!-- <button class="button is-primary">Sign in</button> --}}
 				</form>
-		</div>
+			</div>
 	</div>
 
 
 
-<form class="">
-<h3>Enter your five interests below!</h3>
-<div class='form-group mb-3'>
-	<div class='col-sm-10'>
-		<input type='interest1'	class='input form-control' id='interest1' placeholder='InterestOne'/>
-	</div>
-</div>
-<div class='form-group mb-3'>
-	<div class='col-sm-10'>
-		<input type='text' class='input form-control'id='interest2' placeholder='InterestTwo'/>
-	</div>
-<div class='form-group mb-3'>
-	<div class='col-sm-10'>
-		<input type='text' class='is-info form-control' id='interest3' placeholder='InterestThree'/>
-	</div>
-</div>
-<div class='form-group mb-3'>
-	<div class='col-sm-10'>
-		<input type='text' class='form-control' id='interest4' placeholder='InterestFour'/>
-	</div>
-</div>
-<div class='form-group mb-3'>
-	<div class='col-sm-10'>
-		<input type='text' class='form-control' id='interest5' placeholder='InterestFive'/>
-	</div>
-</div>
-<div class='form-group'>
-	<div class='col-sm-offset-2 col-sm-10'>
-		<button id='signupBtn' type='submit' class='btn d-grid gap-2 col-6 mx-auto btn-primary' >Sign up</button>
-	</div>
-</div>
-</form>
+
+
+
+
+
+
+					<h3>Enter your five interests below!</h3>
+					<div class='form-group mb-3'>
+						{{! <label
+							for='inputPassword3'
+							class='col-sm-2 form-label'
+						>Password</label> }}
+						<div class='col-sm-10'>
+							<input
+								type='interest1'
+								class='form-control'
+								id='interest1'
+								placeholder='drinks'
+							/>
+						</div>
+					</div>
+					<div class='form-group mb-3'>
+						{{! <label
+							for='inputPassword3'
+							class='col-sm-2 form-label'
+						>Password</label> }}
+						<div class='col-sm-10'>
+							<input
+								type='text'
+								class='form-control'
+								id='interest2'
+								placeholder='coding'
+							/>
+						</div>
+					</div>
+					<div class='form-group mb-3'>
+						{{! <label
+							for='inputPassword3'
+							class='col-sm-2 form-label'
+						>Password</label> }}
+						<div class='col-sm-10'>
+							<input
+								type='text'
+								class='form-control'
+								id='interest3'
+								placeholder='movies'
+							/>
+						</div>
+					</div>
+					<div class='form-group mb-3'>
+						{{! <label
+							for='inputPassword3'
+							class='col-sm-2 form-label'
+						>Password</label> }}
+						<div class='col-sm-10'>
+							<input
+								type='text'
+								class='form-control'
+								id='interest4'
+								placeholder='exercise'
+							/>
+						</div>
+					</div>
+					<div class='form-group mb-3'>
+						{{! <label
+							for='inputPassword3'
+							class='col-sm-2 form-label'
+						>Password</label> }}
+						<div class='col-sm-10'>
+							<input
+								type='text'
+								class='form-control'
+								id='interest5'
+								placeholder='travel'
+							/>
+						</div>
+					</div>
+
+
+						<div class='form-group'>
+							<div class='col-sm-offset-2 col-sm-10'>
+								<button
+									id='signupBtn'
+									type='submit'
+									class='btn d-grid gap-2 col-6 mx-auto btn-primary'
+								>Sign up</button>
+							</div>
+						</div>
+					</form>
+			
+		
+		
 	</div>
 </div>
 
