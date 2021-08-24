@@ -2,15 +2,11 @@
 	<div class='signup-container'>
 		<div class='row'>
 			<div class='col-md-4 img-content'>
-				<img
-					class='img-sign-up img-thumbnail'
-					src='/assets/images/sign-up.png'
-				/>
+				<img class='img-sign-up img-thumbnail' src='/assets/images/sign-up.png'/>
 			</div>
 			<div class='col-md-7 form-content'>
 			<div class="app-bio">
 					<h1 class='title'>High5!</h1>
-
 					<p>
 						Are you bored? Don't have plans tonight? We have the perfect app for
 						you. This app will help you find a close-knit group of people that you
@@ -21,8 +17,10 @@
 						similar interests as you. Sign up today!
 					</p>
 			</div>
-		</div>
-	</div>	
+		 </div>
+	  </div>
+	</div>
+	<div class='signup-container'>
 			<div class="login-box">
 				<form class="box">
 					<div class="field">
@@ -62,101 +60,44 @@
 			</div>
 	</div>
 
+	<div class="interest-contatiner">
+		<form class="interest-form">
+			<div class="form-title">
+				<h3>Enter your five interests below!</h3>
+			</div>
+			<div class='form-group mb-3'>
+				<div class='col-sm-10'>
+					<input type='interest1' class='input form-control' id='interest1' placeholder='drinks' />
+				</div>
+			</div>
+			<div class='form-group mb-3'>
+				<div class='col-sm-10'>
+					<input type='text' class='form-control' id='interest2' placeholder='coding'/>
+				</div>
+			</div>
+			<div class='form-group mb-3'>
+				<div class='col-sm-10'>
+					<input type='text' class='form-control' id='interest3' placeholder='movies'/>
+				</div>
+			</div>
+			<div class='form-group mb-3'>
+				<div class='col-sm-10'>
+					<input type='text' class='form-control' id='interest4' placeholder='exercise' />
+				</div>
+			</div>
+			<div class='form-group mb-3'>
+				<div class='col-sm-10'>
+					<input type='text' class='form-control' id='interest5' placeholder='travel'/>
+				</div>
+			</div>
+			<div class='form-group'>
+				<div class='col-sm-offset-2 col-sm-10'>
+					<button id='signupBtn' type='submit' class='btn d-grid gap-2 col-6 mx-auto btn-primary' >Sign up</button>
+				</div>
+			</div>
+		</form>
+	</div>			
 
-
-
-
-
-
-
-
-					<h3>Enter your five interests below!</h3>
-					<div class='form-group mb-3'>
-						{{! <label
-							for='inputPassword3'
-							class='col-sm-2 form-label'
-						>Password</label> }}
-						<div class='col-sm-10'>
-							<input
-								type='interest1'
-								class='form-control'
-								id='interest1'
-								placeholder='drinks'
-							/>
-						</div>
-					</div>
-					<div class='form-group mb-3'>
-						{{! <label
-							for='inputPassword3'
-							class='col-sm-2 form-label'
-						>Password</label> }}
-						<div class='col-sm-10'>
-							<input
-								type='text'
-								class='form-control'
-								id='interest2'
-								placeholder='coding'
-							/>
-						</div>
-					</div>
-					<div class='form-group mb-3'>
-						{{! <label
-							for='inputPassword3'
-							class='col-sm-2 form-label'
-						>Password</label> }}
-						<div class='col-sm-10'>
-							<input
-								type='text'
-								class='form-control'
-								id='interest3'
-								placeholder='movies'
-							/>
-						</div>
-					</div>
-					<div class='form-group mb-3'>
-						{{! <label
-							for='inputPassword3'
-							class='col-sm-2 form-label'
-						>Password</label> }}
-						<div class='col-sm-10'>
-							<input
-								type='text'
-								class='form-control'
-								id='interest4'
-								placeholder='exercise'
-							/>
-						</div>
-					</div>
-					<div class='form-group mb-3'>
-						{{! <label
-							for='inputPassword3'
-							class='col-sm-2 form-label'
-						>Password</label> }}
-						<div class='col-sm-10'>
-							<input
-								type='text'
-								class='form-control'
-								id='interest5'
-								placeholder='travel'
-							/>
-						</div>
-					</div>
-
-
-						<div class='form-group'>
-							<div class='col-sm-offset-2 col-sm-10'>
-								<button
-									id='signupBtn'
-									type='submit'
-									class='btn d-grid gap-2 col-6 mx-auto btn-primary'
-								>Sign up</button>
-							</div>
-						</div>
-					</form>
-			
-		
-		
-	</div>
 </div>
 
 <script src='/javascript/sign-up.js'></script>
